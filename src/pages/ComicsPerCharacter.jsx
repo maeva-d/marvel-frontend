@@ -14,7 +14,7 @@ const ComicsPerCharacter = () => {
   useEffect(() => {
     let url = `https://site--backend-marvel--rfd99txfpp4t.code.run/comics/${characterId}?apiKey=${
       import.meta.env.VITE_API_KEY
-    }`;
+    }&page=${page}`;
 
     const fetchData = async () => {
       try {
@@ -27,7 +27,7 @@ const ComicsPerCharacter = () => {
       }
     };
     fetchData();
-  }, [characterId]);
+  }, [characterId, page]);
 
   const handleFavorites = (comic) => {
     // Je veux récupérer une clé
