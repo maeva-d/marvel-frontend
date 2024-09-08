@@ -47,6 +47,7 @@ const ComicsPerCharacter = () => {
   ) : (
     <main className="common-rules">
       {/* <div className="container"> */}
+      <h1>{`Here is a list of all the comics ${data.name} is featured in :`}</h1>
       <nav>
         <div>
           {page > 1 && (
@@ -70,7 +71,7 @@ const ComicsPerCharacter = () => {
           )}
         </div>
       </nav>
-      <h1>{`Here is a list of all the comics ${data.name} is featured in :`}</h1>
+
       <section>
         {data.comics.map((comic) => {
           return (
@@ -97,6 +98,29 @@ const ComicsPerCharacter = () => {
         })}
       </section>
       {/* </div> */}
+      <nav>
+        <div>
+          {page > 1 && (
+            <button
+              onClick={() => {
+                setPage(page - 1);
+              }}
+            >
+              🢔 {page - 1}
+            </button>
+          )}
+          <span>PAGE {page}</span>
+          {data.comics.length >= 100 && (
+            <button
+              onClick={() => {
+                setPage(page + 1);
+              }}
+            >
+              {page + 1} 🢖
+            </button>
+          )}
+        </div>
+      </nav>
     </main>
   );
 };

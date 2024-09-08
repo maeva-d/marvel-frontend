@@ -122,6 +122,29 @@ const Characters = () => {
           );
         })}
       </section>
+      <nav>
+        <div>
+          {page > 1 && (
+            <button
+              onClick={() => {
+                setPage(page - 1);
+              }}
+            >
+              🢔 {page - 1}
+            </button>
+          )}
+          <span>PAGE {page}</span>
+          {data.limit >= 100 && (
+            <button
+              onClick={() => {
+                setPage(page + 1);
+              }}
+            >
+              {page + 1} 🢖
+            </button>
+          )}
+        </div>
+      </nav>
     </main>
   );
 };
