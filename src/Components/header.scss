@@ -1,0 +1,77 @@
+.header-component {
+  height: 62px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to right, #ee171f 25%, #ffa7aa 40%, white 62%);
+
+  .container {
+    width: 1280px;
+    margin: 0 auto;
+    // border-bottom: 1px solid red;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  img {
+    height: 62px;
+    object-fit: contain;
+    margin-right: 96px;
+  }
+
+  nav {
+    // background: linear-gradient(to right, #ee171f 25%, white 60%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  button {
+    background-color: white;
+    color: #ee171f;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border: none;
+    font-weight: bold;
+    padding: 8px 16px;
+    transition: all 0.5s;
+    position: relative;
+    margin-left: 16px;
+    border-radius: 5px;
+  }
+
+  button:after {
+    content: "»";
+    position: absolute;
+    opacity: 0;
+    top: 6px;
+    right: -10px;
+    transition: 0.2s;
+  }
+
+  button:hover {
+    padding-right: 24px;
+    padding-left: 8px;
+    background-color: #ee171f;
+    color: white;
+    cursor: pointer;
+  }
+
+  button:hover:after {
+    opacity: 1;
+    right: 10px;
+  }
+
+  div img {
+    height: 100%;
+    margin: 0 80px;
+  }
+}
