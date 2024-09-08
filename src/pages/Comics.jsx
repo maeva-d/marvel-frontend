@@ -1,6 +1,7 @@
 import "./common-rules.scss";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import heart from "../assets/heart-icon.png";
 // import { useDebounce } from "use-debounce";
 
 const Comics = () => {
@@ -94,7 +95,7 @@ const Comics = () => {
               <div>
                 <img
                   className="heart-icon"
-                  src="./src/assets/heart-icon.png"
+                  src={heart}
                   alt="heart-icon"
                   onClick={(event) => {
                     event.preventDefault();

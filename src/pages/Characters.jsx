@@ -2,6 +2,7 @@ import "./common-rules.scss";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import heart from "../assets/heart-icon.png";
 
 // require("dotenv").config();
 
@@ -105,7 +106,7 @@ const Characters = () => {
                       event.preventDefault();
                       handleFavorites(character);
                     }}
-                    src="./src/assets/heart-icon.png"
+                    src={heart}
                     alt="heart-icon"
                   />
                   <img

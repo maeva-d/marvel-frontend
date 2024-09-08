@@ -1,12 +1,13 @@
 // import ".App.css";
 import "./header.scss";
 import { Link } from "react-router-dom";
+import marvel from "../assets/logo-marvel.png";
 
 const Header = () => {
   return (
     <header className="header-component">
       <nav className="container">
-        <img src="./src/assets/logo-marvel.png" alt="marvel-logo" />
+        <img src={marvel} alt="marvel-logo" />
         <div>
           <Link to="/">
             <button>Characters</button>

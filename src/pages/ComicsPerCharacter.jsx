@@ -2,6 +2,7 @@ import "./common-rules.scss";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
+import heart from "../assets/heart-icon.png";
 
 const ComicsPerCharacter = () => {
   const [data, setData] = useState();
@@ -76,7 +77,7 @@ const ComicsPerCharacter = () => {
             <article key={comic._id}>
               <div>
                 <img
-                  src="./src/assets/heart-icon.png"
+                  src={heart}
                   alt="heart-icon"
                   className="heart-icon"
                   onClick={(event) => {

@@ -1,5 +1,6 @@
 import "./common-rules.scss";
 import "./favorites.scss";
+import heart from "../assets/heart-icon.png";
 import { useState } from "react";
 
 const Favorites = () => {
@@ -69,7 +70,7 @@ const Favorites = () => {
                     <span>(comics) </span>
                   )}
                   <img
-                    src="./src/assets/heart-icon.png"
+                    src={heart}
                     alt="heart-icon"
                     onClick={(event) => {
                       event.preventDefault();
