@@ -62,7 +62,7 @@ const Favorites = () => {
           {arr.map((fav) => {
             // console.log("fav elem", fav);
             return (
-              <section className={display}>
+              <section className={display} key={fav._id}>
                 <div>
                   {fav.name ? (
                     <span>(characters)</span>

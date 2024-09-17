@@ -119,6 +119,7 @@
     margin: 24px;
     padding: 24px;
     box-sizing: border-box;
+    transition: transform 400ms;
   }
 
   section:hover {
@@ -136,11 +137,16 @@
   section div img {
     width: 30px;
     height: 30px;
+    transition: transform 200ms;
   }
 
   section div img:hover {
     cursor: pointer;
     transform: scale(1.4);
+  }
+
+  section div img:active {
+    transform: scale(1.02);
   }
 
   section > img {

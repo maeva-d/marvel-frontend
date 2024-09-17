@@ -11,7 +11,7 @@ const Characters = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [search, setSearch] = useState("");
   const [page, setPage] = useState(1);
-  const [added, setAdded] = useState([]);
+  // const [added, setAdded] = useState([]);
 
   useEffect(() => {
     let url = `https://site--backend-marvel--rfd99txfpp4t.code.run/characters?apiKey=${
