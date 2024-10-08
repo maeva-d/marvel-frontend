@@ -1,0 +1,61 @@
+.pagination-system {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  span,
+  button {
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: rgb(113, 60, 21);
+    transition: transform 100ms;
+  }
+
+  span {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 25px;
+    padding: 0 8px;
+  }
+
+  button {
+    border: none;
+    &link,
+    &:visited {
+      text-transform: uppercase;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.2s;
+      position: absolute;
+    }
+    &:active,
+    &:hover {
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    }
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.2);
+      animation: 2s;
+      transform: translateY(-3px);
+    }
+    &:active {
+      transform: translateY(-1px);
+    }
+    &::after {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transition: all 0.4s;
+    }
+    &:hover::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+}

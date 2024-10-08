@@ -4,15 +4,19 @@ import { useState, useEffect } from "react";
 // styles
 import "./characters-and-comics.scss";
 import "../common-rules.scss";
+// pictures
 import heart from "../assets/heart-icon.png";
+import hulkWalking from "../assets/hulk-walking.gif";
+// Components
+import Pagination from "../Components/Pagination";
 
 const Comics = () => {
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
   const [search, setSearch] = useState("");
-  // const [value] = useDebounce(search, 1500);
   const [page, setPage] = useState(1);
   // const [added, setAdded] = useState(false);
+  // const [value] = useDebounce(search, 1500);
 
   useEffect(() => {
     let url = `https://site--backend-marvel--rfd99txfpp4t.code.run/comics?apiKey=${
@@ -51,7 +55,10 @@ const Comics = () => {
   };
 
   return isLoading ? (
-    <p className="container">Loading...</p>
+    <div className="container loading">
+      <img alt="hulk-walking" src={hulkWalking} />
+      <p>Loading...</p>
+    </div>
   ) : (
     <main className="characters-and-comics">
       {/* <div className="container"> */}
@@ -65,33 +72,19 @@ const Comics = () => {
       />
       <nav>
         <h3>{`Results found : ${data.count}`}</h3>
-        <div>
-          {page > 1 && (
-            <button
-              onClick={() => {
-                setPage(page - 1);
-              }}
-            >
-              🢔 {page - 1}
-            </button>
-          )}
-          <span>PAGE {page}</span>
-          {data.limit >= 100 && (
-            <button
-              onClick={() => {
-                setPage(page + 1);
-              }}
-            >
-              {page + 1} 🢖
-            </button>
-          )}
-        </div>
+        <Pagination
+          limit={data.limit}
+          // count={data.count}
+          pageNumber={page}
+          setPageNumber={setPage}
+        ></Pagination>
       </nav>
+
       <h1>Comics</h1>
-      <section>
+      <section className="no-redirection">
         {data.results.map((comic) => {
           return (
-            <article key={comic._id}>
+            <article key={comic._id} className="cards">
               <div>
                 <img
                   className="heart-icon"
@@ -114,29 +107,15 @@ const Comics = () => {
         })}
       </section>
       {/* </div> */}
-      <nav>
-        <div>
-          {page > 1 && (
-            <button
-              onClick={() => {
-                setPage(page - 1);
-              }}
-            >
-              🢔 {page - 1}
-            </button>
-          )}
-          <span>PAGE {page}</span>
-          {data.limit >= 100 && (
-            <button
-              onClick={() => {
-                setPage(page + 1);
-              }}
-            >
-              {page + 1} 🢖
-            </button>
-          )}
-        </div>
-      </nav>
+      {/* S'il n'y a aucun résultat, pas besoin de mettre une autre pagination en bas de la page */}
+      {data.count > 0 && (
+        <Pagination
+          limit={data.limit}
+          // count={data.count}
+          pageNumber={page}
+          setPageNumber={setPage}
+        ></Pagination>
+      )}
     </main>
   );
 };

@@ -1,3 +1,4 @@
+// This fill lists styles of elements used several times at different places
 .pointer {
   cursor: pointer;
 }
@@ -25,5 +26,18 @@
 }
 
 .loading {
-  font-style: italic;
+  //   background-color: red;
+  //   background-image: url("./assets/hulk2-unsplash.jpg");
+  //   background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  p {
+    margin-top: 32px;
+    font-style: italic;
+    text-align: center;
+  }
 }

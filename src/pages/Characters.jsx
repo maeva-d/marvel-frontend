@@ -1,8 +1,14 @@
-import "./characters-and-comics.scss";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+// styles
+import "../common-rules.scss";
+import "./characters-and-comics.scss";
+// pictures
 import heart from "../assets/heart-icon.png";
+import hulkWalking from "../assets/hulk-walking.gif";
+// Components
+import Pagination from "../Components/Pagination";
 
 // require("dotenv").config();
 
@@ -50,7 +56,10 @@ const Characters = () => {
   };
 
   return isLoading ? (
-    <p className="container">Loading...</p>
+    <div className="container loading">
+      <img alt="hulk-walking" src={hulkWalking} />
+      <p>Loading...</p>
+    </div>
   ) : (
     <main className="characters-and-comics">
       {/* <div className="container"></div> */}
@@ -62,30 +71,13 @@ const Characters = () => {
           setSearch(event.target.value);
         }}
       />
-      <nav>
-        <h3>{`Results found : ${data.count}`}</h3>
-        <div>
-          {page > 1 && (
-            <button
-              onClick={() => {
-                setPage(page - 1);
-              }}
-            >
-              🢔 {page - 1}
-            </button>
-          )}
-          <span>PAGE {page}</span>
-          {data.limit >= 100 && (
-            <button
-              onClick={() => {
-                setPage(page + 1);
-              }}
-            >
-              {page + 1} 🢖
-            </button>
-          )}
-        </div>
-      </nav>
+      <h3>{`Results found : ${data.count}`}</h3>
+      <Pagination
+        limit={data.limit}
+        // count={data.count}
+        pageNumber={page}
+        setPageNumber={setPage}
+      ></Pagination>
 
       <h1>Characters</h1>
       <section>
@@ -97,7 +89,7 @@ const Characters = () => {
               }`}
               key={character._id}
             >
-              <article key={character._id} className="pointer">
+              <article key={character._id} className="cards pointer">
                 <div>
                   <img
                     className="heart-icon"
@@ -122,29 +114,15 @@ const Characters = () => {
           );
         })}
       </section>
-      <nav>
-        <div>
-          {page > 1 && (
-            <button
-              onClick={() => {
-                setPage(page - 1);
-              }}
-            >
-              🢔 {page - 1}
-            </button>
-          )}
-          <span>PAGE {page}</span>
-          {data.limit >= 100 && (
-            <button
-              onClick={() => {
-                setPage(page + 1);
-              }}
-            >
-              {page + 1} 🢖
-            </button>
-          )}
-        </div>
-      </nav>
+      {/* S'il n'y a aucun résultat, pas besoin de mettre une autre pagination en bas de la page */}
+      {data.count > 0 && (
+        <Pagination
+          limit={data.limit}
+          // count={data.count}
+          pageNumber={page}
+          setPageNumber={setPage}
+        ></Pagination>
+      )}
     </main>
   );
 };

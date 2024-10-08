@@ -3,7 +3,12 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 // styles
 import "../common-rules.scss";
+import "./characters-and-comics.scss";
+// pictures
 import heart from "../assets/heart-icon.png";
+import hulkWalking from "../assets/hulk-walking.gif";
+// Components
+import Pagination from "../Components/Pagination";
 
 const ComicsPerCharacter = () => {
   const [data, setData] = useState();
@@ -22,7 +27,6 @@ const ComicsPerCharacter = () => {
       try {
         const response = await axios.get(url);
         setData(response.data);
-        console.log(data);
         setIsLoading(false);
       } catch (error) {
         console.log(error.response.data);
@@ -44,39 +48,24 @@ const ComicsPerCharacter = () => {
   };
 
   return isLoading ? (
-    <p className="container">Loading...</p>
+    <div className="container loading">
+      <img alt="hulk-walking" src={hulkWalking} />
+      <p>Loading...</p>
+    </div>
   ) : (
-    <main className="common-rules">
+    <main className="characters-and-comics">
       {/* <div className="container"> */}
       <h1>{`Here is a list of all the comics ${data.name} is featured in :`}</h1>
-      <nav>
-        <div>
-          {page > 1 && (
-            <button
-              onClick={() => {
-                setPage(page - 1);
-              }}
-            >
-              🢔 {page - 1}
-            </button>
-          )}
-          <span>PAGE {page}</span>
-          {data.comics.length >= 100 && (
-            <button
-              onClick={() => {
-                setPage(page + 1);
-              }}
-            >
-              {page + 1} 🢖
-            </button>
-          )}
-        </div>
-      </nav>
+      <Pagination
+        limit={data.comics.length}
+        pageNumber={page}
+        setPageNumber={setPage}
+      ></Pagination>
 
-      <section>
+      <section className="no-redirection">
         {data.comics.map((comic) => {
           return (
-            <article key={comic._id}>
+            <article key={comic._id} className="cards">
               <div>
                 <img
                   src={heart}
@@ -99,29 +88,11 @@ const ComicsPerCharacter = () => {
         })}
       </section>
       {/* </div> */}
-      <nav>
-        <div>
-          {page > 1 && (
-            <button
-              onClick={() => {
-                setPage(page - 1);
-              }}
-            >
-              🢔 {page - 1}
-            </button>
-          )}
-          <span>PAGE {page}</span>
-          {data.comics.length >= 100 && (
-            <button
-              onClick={() => {
-                setPage(page + 1);
-              }}
-            >
-              {page + 1} 🢖
-            </button>
-          )}
-        </div>
-      </nav>
+      <Pagination
+        limit={data.comics.length}
+        pageNumber={page}
+        setPageNumber={setPage}
+      ></Pagination>
     </main>
   );
 };
