@@ -1,4 +1,4 @@
-import "./common-rules.scss";
+import "./characters-and-comics.scss";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
@@ -52,7 +52,7 @@ const Characters = () => {
   return isLoading ? (
     <p className="container">Loading...</p>
   ) : (
-    <main className="common-rules">
+    <main className="characters-and-comics">
       {/* <div className="container"></div> */}
       <input
         type="text"

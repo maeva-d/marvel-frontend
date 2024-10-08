@@ -1,4 +1,4 @@
-import "./App.scss";
+// import "./App.scss";
 // yarn add axios react-router-dom
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 

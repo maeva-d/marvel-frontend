@@ -1,8 +1,10 @@
-import "./common-rules.scss";
+// import { useDebounce } from "use-debounce";
 import axios from "axios";
 import { useState, useEffect } from "react";
+// styles
+import "./characters-and-comics.scss";
+import "../common-rules.scss";
 import heart from "../assets/heart-icon.png";
-// import { useDebounce } from "use-debounce";
 
 const Comics = () => {
   const [data, setData] = useState();
@@ -17,16 +19,15 @@ const Comics = () => {
       import.meta.env.VITE_API_KEY
     }&page=${page}`;
 
-    // Le filtre search s'appliquera uniquement si sa valeur est différente d'une string vide (si l'utilisateur rempli la barre de recherche).
+    // Le filtre search s'appliquera uniquement si sa valeur est différente d'une string vide (si l'utilisateur remplit la barre de recherche).
     // Cela évite que rien ne s'affiche quand l'utilisateur ne fait pas de recherche !
-
     if (search !== "") {
       url += `&title=${search}`;
     }
+
     const fetchData = async () => {
       try {
         const response = await axios.get(url);
-        // console.log(value);
         setData(response.data);
         // console.log("comics page data =>", data);
         setIsLoading(false);
@@ -52,7 +53,7 @@ const Comics = () => {
   return isLoading ? (
     <p className="container">Loading...</p>
   ) : (
-    <main className="common-rules">
+    <main className="characters-and-comics">
       {/* <div className="container"> */}
       <input
         type="text"
