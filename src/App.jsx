@@ -1,5 +1,4 @@
 import "./App.scss";
-import { useState } from "react";
 // yarn add axios react-router-dom
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 

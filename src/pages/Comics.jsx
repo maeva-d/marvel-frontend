@@ -10,10 +10,9 @@ const Comics = () => {
   const [search, setSearch] = useState("");
   // const [value] = useDebounce(search, 1500);
   const [page, setPage] = useState(1);
-  const [added, setAdded] = useState(false);
+  // const [added, setAdded] = useState(false);
 
   useEffect(() => {
-    // / ! \ faire une variable denv plus tard !!!
     let url = `https://site--backend-marvel--rfd99txfpp4t.code.run/comics?apiKey=${
       import.meta.env.VITE_API_KEY
     }&page=${page}`;
@@ -29,7 +28,7 @@ const Comics = () => {
         const response = await axios.get(url);
         // console.log(value);
         setData(response.data);
-        console.log("comics page data =>", data);
+        // console.log("comics page data =>", data);
         setIsLoading(false);
       } catch (error) {
         console.log(error);

@@ -28,7 +28,7 @@ const Characters = () => {
       try {
         const response = await axios.get(url);
         setData(response.data);
-        console.log("characeters page data =>", data);
+        // console.log("characeters page data =>", data);
         setIsLoading(false);
       } catch (error) {
         console.log(error.response.data);
