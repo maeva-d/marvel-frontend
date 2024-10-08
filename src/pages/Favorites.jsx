@@ -1,7 +1,8 @@
-import "./common-rules.scss";
+import { useState } from "react";
+// styles
+import "../common-rules.scss";
 import "./favorites.scss";
 import heart from "../assets/heart-icon.png";
-import { useState } from "react";
 
 const Favorites = () => {
   const [display, setDisplay] = useState("flex");

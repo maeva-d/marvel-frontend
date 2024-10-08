@@ -1,7 +1,8 @@
-import "./common-rules.scss";
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
+// styles
+import "../common-rules.scss";
 import heart from "../assets/heart-icon.png";
 
 const ComicsPerCharacter = () => {
