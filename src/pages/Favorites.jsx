@@ -1,7 +1,8 @@
 import { useState } from "react";
 // styles
-import "../common-rules.scss";
+import "./styles.scss";
 import "./favorites.scss";
+// pictures
 import heart from "../assets/heart-icon.png";
 
 const Favorites = () => {

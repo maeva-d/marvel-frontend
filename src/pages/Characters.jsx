@@ -2,8 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 // styles
-import "../common-rules.scss";
-import "./characters-and-comics.scss";
+import "./styles.scss";
 // pictures
 import heart from "../assets/heart-icon.png";
 // Components

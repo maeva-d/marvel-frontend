@@ -2,8 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 // styles
-import "../common-rules.scss";
-import "./characters-and-comics.scss";
+import "./styles.scss";
 // pictures
 import heart from "../assets/heart-icon.png";
 // Components
@@ -52,6 +51,7 @@ const ComicsPerCharacter = () => {
   ) : (
     <main className="characters-and-comics">
       {/* <div className="container"> */}
+      <h3>{`Results found : ${data.comics.length}`}</h3>
       <h1>{`Here is a list of all the comics ${data.name} is featured in :`}</h1>
       <Pagination
         limit={data.comics.length}

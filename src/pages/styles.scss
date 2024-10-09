@@ -1,3 +1,31 @@
+///////// Small elements
+.pointer {
+  cursor: pointer;
+}
+
+.heart-icon {
+  width: 30px;
+  height: 30px;
+  margin: 8px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: transform 200ms;
+  &:hover {
+    transform: scale(1.4);
+    cursor: pointer;
+  }
+  &:active {
+    transform: scale(1.02);
+  }
+}
+
+.container {
+  width: 1280px;
+  margin: 0 auto;
+}
+
+///////// Pages
 .characters-and-comics {
   background-color: #f5f5f3;
   min-height: 100vh;
@@ -41,30 +69,12 @@
   }
 
   section {
-    // margin-bottom: 32px;
     display: flex;
     flex-direction: column;
     gap: 80px;
 
     a {
       text-decoration: none;
-
-      // h2 {
-      //   font-size: 32px;
-      //   color: rgb(255, 166, 166);
-      //   text-transform: uppercase;
-      //   -webkit-text-stroke-width: 1px;
-      //   -webkit-text-stroke-color: #444444;
-      // }
-
-      // p {
-      //   line-height: 30px;
-      //   letter-spacing: 1px;
-      //   font-size: 20px;
-      //   font-family: "Roboto", sans-serif;
-      //   font-weight: 300;
-      //   color: rgb(31, 17, 17);
-      // }
     }
   }
 }
@@ -104,13 +114,6 @@
       -webkit-text-stroke-color: #444444;
     }
   }
-
-  // img:nth-of-type(2) {
-  //   width: 300px;
-  //   height: 300px;
-  //   object-fit: contain;
-  //   margin-right: 32px;
-  // }
 
   p {
     line-height: 30px;
