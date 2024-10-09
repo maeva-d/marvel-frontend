@@ -6,9 +6,9 @@ import "./characters-and-comics.scss";
 import "../common-rules.scss";
 // pictures
 import heart from "../assets/heart-icon.png";
-import hulkWalking from "../assets/hulk-walking.gif";
-import angryHulk from "../assets/hulk-unsplash.jpg";
 // Components
+import Loading from "../Components/Loading";
+import NoResults from "../Components/NoResults";
 import Pagination from "../Components/Pagination";
 
 const Comics = () => {
@@ -56,10 +56,7 @@ const Comics = () => {
   };
 
   return isLoading ? (
-    <div className="container loading">
-      <img alt="hulk-walking" src={hulkWalking} />
-      <p>Loading...</p>
-    </div>
+    <Loading />
   ) : (
     <main className="characters-and-comics">
       {/* <div className="container"> */}
@@ -73,19 +70,17 @@ const Comics = () => {
       />
       <h3>{`Results found : ${data.count}`}</h3>
       <h1>Comics</h1>
+      {/* {data.count !== 0 && ( */}
       <Pagination
         limit={data.limit}
         // count={data.count}
         pageNumber={page}
         setPageNumber={setPage}
       ></Pagination>
+      {/* )} */}
 
-      {/* Content displayed : => */}
       {data.count === 0 ? (
-        <div className="no-results">
-          <p>No results were found :/</p>
-          <img alt="angry-hulk" src={angryHulk} />
-        </div>
+        <NoResults></NoResults>
       ) : (
         <section>
           {data.results.map((comic) => {

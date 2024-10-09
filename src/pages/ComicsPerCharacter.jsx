@@ -6,15 +6,14 @@ import "../common-rules.scss";
 import "./characters-and-comics.scss";
 // pictures
 import heart from "../assets/heart-icon.png";
-import hulkWalking from "../assets/hulk-walking.gif";
 // Components
+import Loading from "../Components/Loading";
 import Pagination from "../Components/Pagination";
 
 const ComicsPerCharacter = () => {
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
   const [page, setPage] = useState(1);
-
   // NE PAS OUBLIER CA :
   const { characterId } = useParams();
 
@@ -26,6 +25,7 @@ const ComicsPerCharacter = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(url);
+        console.log(response.data);
         setData(response.data);
         setIsLoading(false);
       } catch (error) {
@@ -48,10 +48,7 @@ const ComicsPerCharacter = () => {
   };
 
   return isLoading ? (
-    <div className="container loading">
-      <img alt="hulk-walking" src={hulkWalking} />
-      <p>Loading...</p>
-    </div>
+    <Loading />
   ) : (
     <main className="characters-and-comics">
       {/* <div className="container"> */}
@@ -62,7 +59,7 @@ const ComicsPerCharacter = () => {
         setPageNumber={setPage}
       ></Pagination>
 
-      <section className="no-redirection">
+      <section>
         {data.comics.map((comic) => {
           return (
             <article key={comic._id} className="cards">
