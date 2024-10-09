@@ -2,7 +2,8 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 // styles
-import "./styles.scss";
+import "../common-elements.scss";
+import "./characters-and-comics.scss";
 // pictures
 import heart from "../assets/heart-icon.png";
 // Components

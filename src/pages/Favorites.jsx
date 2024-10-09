@@ -1,6 +1,6 @@
 import { useState } from "react";
 // styles
-import "./styles.scss";
+import "../common-elements.scss";
 import "./favorites.scss";
 // pictures
 import heart from "../assets/heart-icon.png";
@@ -32,8 +32,8 @@ const Favorites = () => {
   };
 
   return (
-    <main className="fav-page">
-      <div className="container">
+    <main className="layout">
+      <div className="container favorites">
         <nav>
           <h1>Your favorites</h1>
           {arr.length > 0 && (
@@ -50,7 +50,7 @@ const Favorites = () => {
           {arr.map((fav) => {
             // console.log("fav elem", fav);
             return (
-              <section className={display} key={fav._id}>
+              <section className={`${display} favorite-card`} key={fav._id}>
                 <div>
                   {fav.name ? (
                     <span>(characters)</span>
@@ -60,6 +60,7 @@ const Favorites = () => {
                   <img
                     src={heart}
                     alt="heart-icon"
+                    className="heart-icon"
                     onClick={(event) => {
                       event.preventDefault();
                       handleFavorites(fav);
@@ -76,7 +77,7 @@ const Favorites = () => {
           })}
         </menu>
         <nav>
-          {arr.length >= 8 && (
+          {arr.length >= 12 && (
             <Pagination
               limit={arr.length}
               pageNumber={page}
