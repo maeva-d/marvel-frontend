@@ -4,12 +4,11 @@ import { useState, useEffect } from "react";
 // styles
 import "../common-elements.scss";
 import "./characters-and-comics.scss";
-// pictures
-import heart from "../assets/heart-icon.png";
 // Components
 import Loading from "../Components/Loading";
 import NoResults from "../Components/NoResults";
 import Pagination from "../Components/Pagination";
+import HeartIcon from "../Components/heartIcons";
 
 const Comics = () => {
   const [data, setData] = useState();
@@ -86,15 +85,12 @@ const Comics = () => {
               return (
                 <article key={comic._id} className="cards">
                   <div>
-                    <img
-                      className="heart-icon"
-                      src={heart}
-                      alt="heart-icon"
+                    <HeartIcon
                       onClick={(event) => {
                         event.preventDefault();
                         handleFavorites(comic);
                       }}
-                    />
+                    ></HeartIcon>
                     <img
                       src={`${comic.thumbnail.path}.${comic.thumbnail.extension}`}
                       alt={comic.title}

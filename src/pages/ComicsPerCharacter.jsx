@@ -4,11 +4,10 @@ import { useParams } from "react-router-dom";
 // styles
 import "../common-elements.scss";
 import "./characters-and-comics.scss";
-// pictures
-import heart from "../assets/heart-icon.png";
 // Components
 import Loading from "../Components/Loading";
 import Pagination from "../Components/Pagination";
+import HeartIcon from "../Components/heartIcons";
 
 const ComicsPerCharacter = () => {
   const [data, setData] = useState();
@@ -65,15 +64,12 @@ const ComicsPerCharacter = () => {
             return (
               <article key={comic._id} className="cards">
                 <div>
-                  <img
-                    src={heart}
-                    alt="heart-icon"
-                    className="heart-icon"
+                  <HeartIcon
                     onClick={(event) => {
                       event.preventDefault();
                       handleFavorites(comic);
                     }}
-                  />
+                  ></HeartIcon>
                   <img
                     src={`${comic.thumbnail.path}.${comic.thumbnail.extension}`}
                     alt={comic.title}

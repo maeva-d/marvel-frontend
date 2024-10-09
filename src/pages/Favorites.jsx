@@ -2,10 +2,9 @@ import { useState } from "react";
 // styles
 import "../common-elements.scss";
 import "./favorites.scss";
-// pictures
-import heart from "../assets/heart-icon.png";
 // Components
 import Pagination from "../Components/Pagination";
+import HeartIcon from "../Components/heartIcons";
 
 const Favorites = () => {
   const [display, setDisplay] = useState("flex");
@@ -50,29 +49,22 @@ const Favorites = () => {
           {arr.map((fav) => {
             // console.log("fav elem", fav);
             return (
-              <section className={`${display} favorite-card`} key={fav._id}>
+              <article className={`${display} favorite-card`} key={fav._id}>
                 <div>
-                  {fav.name ? (
-                    <span>(characters)</span>
-                  ) : (
-                    <span>(comics) </span>
-                  )}
-                  <img
-                    src={heart}
-                    alt="heart-icon"
-                    className="heart-icon"
+                  <span>{fav.name ? "(characters)" : "(comics)"}</span>
+                  <HeartIcon
                     onClick={(event) => {
                       event.preventDefault();
                       handleFavorites(fav);
                     }}
-                  />
+                  ></HeartIcon>
                 </div>
-                {fav.name ? <h2>{fav.name}</h2> : <h2>{fav.title}</h2>}
+                <h2>{fav.name || fav.title}</h2>
                 <img
                   src={`${fav.thumbnail.path}.${fav.thumbnail.extension}`}
                   alt={fav.name}
                 />
-              </section>
+              </article>
             );
           })}
         </menu>

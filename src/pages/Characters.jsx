@@ -4,12 +4,11 @@ import { Link } from "react-router-dom";
 // styles
 import "../common-elements.scss";
 import "./characters-and-comics.scss";
-// pictures
-import heart from "../assets/heart-icon.png";
 // Components
 import Loading from "../Components/Loading";
 import NoResults from "../Components/NoResults";
 import Pagination from "../Components/Pagination";
+import HeartIcon from "../Components/heartIcons";
 
 // require("dotenv").config();
 
@@ -92,16 +91,12 @@ const Characters = () => {
                 >
                   <article key={character._id} className="cards pointer">
                     <div>
-                      <img
-                        className="heart-icon"
-                        // style={{ opacity: added }}
+                      <HeartIcon
                         onClick={(event) => {
                           event.preventDefault();
                           handleFavorites(character);
                         }}
-                        src={heart}
-                        alt="heart-icon"
-                      />
+                      ></HeartIcon>
                       <img
                         src={`${character.thumbnail.path}.${character.thumbnail.extension}`}
                         alt={character.name}
