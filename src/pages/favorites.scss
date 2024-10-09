@@ -30,19 +30,19 @@
   menu {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 
 .favorite-card {
-  width: 21.2%;
-  background-color: white;
-  border: 1px solid salmon;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin: 24px;
+  border: 1px solid salmon;
+  width: calc(20% - 8px);
   padding: 24px;
-  box-sizing: border-box;
+  background-color: white;
   transition: transform 400ms;
   &:hover {
     transform: translateY(-16px);
