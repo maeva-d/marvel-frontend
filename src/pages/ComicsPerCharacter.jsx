@@ -49,42 +49,42 @@ const ComicsPerCharacter = () => {
   return isLoading ? (
     <Loading />
   ) : (
-    <main className="characters-and-comics">
-      {/* <div className="container"> */}
-      <h3>{`Results found : ${data.comics.length}`}</h3>
-      <h1>{`Here is a list of all the comics ${data.name} is featured in :`}</h1>
-      <Pagination
-        limit={data.comics.length}
-        pageNumber={page}
-        setPageNumber={setPage}
-      ></Pagination>
+    <main className="layout">
+      <div className="container characters-and-comics">
+        <h3>{`Results found : ${data.comics.length}`}</h3>
+        <h1>{`Here is a list of all the comics ${data.name} is featured in :`}</h1>
+        <Pagination
+          limit={data.comics.length}
+          pageNumber={page}
+          setPageNumber={setPage}
+        ></Pagination>
 
-      <section>
-        {data.comics.map((comic) => {
-          return (
-            <article key={comic._id} className="cards">
-              <div>
-                <img
-                  src={heart}
-                  alt="heart-icon"
-                  className="heart-icon"
-                  onClick={(event) => {
-                    event.preventDefault();
-                    handleFavorites(comic);
-                  }}
-                />
-                <img
-                  src={`${comic.thumbnail.path}.${comic.thumbnail.extension}`}
-                  alt={comic.title}
-                />
-                <h2>{comic.title}</h2>
-              </div>
-              {comic.description !== "" && <p>{comic.description}</p>}
-            </article>
-          );
-        })}
-      </section>
-      {/* </div> */}
+        <section>
+          {data.comics.map((comic) => {
+            return (
+              <article key={comic._id} className="cards">
+                <div>
+                  <img
+                    src={heart}
+                    alt="heart-icon"
+                    className="heart-icon"
+                    onClick={(event) => {
+                      event.preventDefault();
+                      handleFavorites(comic);
+                    }}
+                  />
+                  <img
+                    src={`${comic.thumbnail.path}.${comic.thumbnail.extension}`}
+                    alt={comic.title}
+                  />
+                  <h2>{comic.title}</h2>
+                </div>
+                {comic.description !== "" && <p>{comic.description}</p>}
+              </article>
+            );
+          })}
+        </section>
+      </div>
       <Pagination
         limit={data.comics.length}
         pageNumber={page}

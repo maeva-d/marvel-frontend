@@ -57,62 +57,60 @@ const Comics = () => {
   return isLoading ? (
     <Loading />
   ) : (
-    <main className="characters-and-comics">
-      {/* <div className="container"> */}
-      <input
-        type="text"
-        placeholder="Looking for a specific comic?"
-        value={search}
-        onChange={(event) => {
-          setSearch(event.target.value);
-        }}
-      />
-      <h3>{`Results found : ${data.count}`}</h3>
-      <h1>Comics</h1>
-      {data.count > 0 && (
-        <Pagination
-          limit={data.limit}
-          // count={data.count}
-          pageNumber={page}
-          setPageNumber={setPage}
-        ></Pagination>
-      )}
+    <main className="layout">
+      <div className="container characters-and-comics">
+        <input
+          type="text"
+          placeholder="Looking for a specific comic?"
+          value={search}
+          onChange={(event) => {
+            setSearch(event.target.value);
+          }}
+        />
+        <h3>{`Results found : ${data.count}`}</h3>
+        <h1>Comics</h1>
+        {data.count > 0 && (
+          <Pagination
+            limit={data.limit}
+            pageNumber={page}
+            setPageNumber={setPage}
+          ></Pagination>
+        )}
 
-      {data.count === 0 ? (
-        <NoResults></NoResults>
-      ) : (
-        <section>
-          {data.results.map((comic) => {
-            return (
-              <article key={comic._id} className="cards">
-                <div>
-                  <img
-                    className="heart-icon"
-                    src={heart}
-                    alt="heart-icon"
-                    onClick={(event) => {
-                      event.preventDefault();
-                      handleFavorites(comic);
-                    }}
-                  />
-                  <img
-                    src={`${comic.thumbnail.path}.${comic.thumbnail.extension}`}
-                    alt={comic.title}
-                  />
-                  <h2>{comic.title}</h2>
-                </div>
-                {comic.description && <p>{comic.description}</p>}
-              </article>
-            );
-          })}
-        </section>
-      )}
-      {/* </div> */}
+        {data.count === 0 ? (
+          <NoResults />
+        ) : (
+          <section>
+            {data.results.map((comic) => {
+              return (
+                <article key={comic._id} className="cards">
+                  <div>
+                    <img
+                      className="heart-icon"
+                      src={heart}
+                      alt="heart-icon"
+                      onClick={(event) => {
+                        event.preventDefault();
+                        handleFavorites(comic);
+                      }}
+                    />
+                    <img
+                      src={`${comic.thumbnail.path}.${comic.thumbnail.extension}`}
+                      alt={comic.title}
+                    />
+                    <h2>{comic.title}</h2>
+                  </div>
+                  {comic.description && <p>{comic.description}</p>}
+                </article>
+              );
+            })}
+          </section>
+        )}
+      </div>
       {/* S'il n'y a aucun résultat, pas besoin de mettre une autre pagination en bas de la page */}
       {data.count > 0 && (
         <Pagination
           limit={data.limit}
-          // count={data.count}
           pageNumber={page}
           setPageNumber={setPage}
         ></Pagination>

@@ -57,76 +57,75 @@ const Characters = () => {
   return isLoading ? (
     <Loading />
   ) : (
-    <main className="characters-and-comics">
-      {/* <div className="container"></div> */}
-      <input
-        type="text"
-        placeholder="Looking for a specific character?"
-        value={search}
-        onChange={(event) => {
-          setSearch(event.target.value);
-        }}
-      />
-      <h3>{`Results found : ${data.count}`}</h3>
-      <h1>Characters</h1>
-      {data.count > 0 && (
-        <Pagination
-          limit={data.limit}
-          // count={data.count}
-          pageNumber={page}
-          setPageNumber={setPage}
-        ></Pagination>
-      )}
+    <main className="layout">
+      <div className="container characters-and-comics">
+        <input
+          type="text"
+          placeholder="Looking for a specific character?"
+          value={search}
+          onChange={(event) => {
+            setSearch(event.target.value);
+          }}
+        />
+        <h3>{`Results found : ${data.count}`}</h3>
+        <h1>Characters</h1>
+        {data.count > 0 && (
+          <Pagination
+            limit={data.limit}
+            pageNumber={page}
+            setPageNumber={setPage}
+          ></Pagination>
+        )}
 
-      {data.count === 0 ? (
-        <NoResults></NoResults>
-      ) : (
-        <section>
-          {data.results.map((character) => {
-            return (
-              <Link
-                to={`comics/${character._id}?apiKey=${
-                  import.meta.env.VITE_API_KEY
-                }`}
-                key={character._id}
-              >
-                <article key={character._id} className="cards pointer">
-                  <div>
-                    <img
-                      className="heart-icon"
-                      // style={{ opacity: added }}
-                      onClick={(event) => {
-                        event.preventDefault();
-                        handleFavorites(character);
-                      }}
-                      src={heart}
-                      alt="heart-icon"
-                    />
-                    <img
-                      src={`${character.thumbnail.path}.${character.thumbnail.extension}`}
-                      alt={character.name}
-                    />
-                    <h2>{character.name}</h2>
-                  </div>
+        {data.count === 0 ? (
+          <NoResults />
+        ) : (
+          <section>
+            {data.results.map((character) => {
+              return (
+                <Link
+                  to={`comics/${character._id}?apiKey=${
+                    import.meta.env.VITE_API_KEY
+                  }`}
+                  key={character._id}
+                >
+                  <article key={character._id} className="cards pointer">
+                    <div>
+                      <img
+                        className="heart-icon"
+                        // style={{ opacity: added }}
+                        onClick={(event) => {
+                          event.preventDefault();
+                          handleFavorites(character);
+                        }}
+                        src={heart}
+                        alt="heart-icon"
+                      />
+                      <img
+                        src={`${character.thumbnail.path}.${character.thumbnail.extension}`}
+                        alt={character.name}
+                      />
+                      <h2>{character.name}</h2>
+                    </div>
 
-                  {character.description !== "" && (
-                    <p>{character.description}</p>
-                  )}
-                </article>
-              </Link>
-            );
-          })}
-        </section>
-      )}
-      {/* S'il n'y a aucun résultat, pas besoin de mettre une autre pagination en bas de la page */}
-      {data.count > 0 && (
-        <Pagination
-          limit={data.limit}
-          // count={data.count}
-          pageNumber={page}
-          setPageNumber={setPage}
-        ></Pagination>
-      )}
+                    {character.description !== "" && (
+                      <p>{character.description}</p>
+                    )}
+                  </article>
+                </Link>
+              );
+            })}
+          </section>
+        )}
+        {/* S'il n'y a aucun résultat, pas besoin de mettre une autre pagination en bas de la page */}
+        {data.count > 0 && (
+          <Pagination
+            limit={data.limit}
+            pageNumber={page}
+            setPageNumber={setPage}
+          ></Pagination>
+        )}
+      </div>
     </main>
   );
 };

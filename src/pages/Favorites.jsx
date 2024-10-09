@@ -76,7 +76,7 @@ const Favorites = () => {
           })}
         </menu>
         <nav>
-          {arr.length > 10 && (
+          {arr.length >= 8 && (
             <Pagination
               limit={arr.length}
               pageNumber={page}

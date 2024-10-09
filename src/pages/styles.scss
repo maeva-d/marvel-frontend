@@ -26,12 +26,16 @@
 }
 
 ///////// Pages
-.characters-and-comics {
+.layout {
   background-color: #f5f5f3;
   min-height: 100vh;
+}
+
+.characters-and-comics {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 
   input {
     width: 650px;
@@ -78,6 +82,7 @@
     }
   }
 }
+// }
 
 // Complete cards for main pages
 .cards {

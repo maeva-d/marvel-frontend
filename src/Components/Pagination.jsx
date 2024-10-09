@@ -13,19 +13,15 @@ const Pagination = ({ limit, pageNumber, setPageNumber }) => {
         </button>
       )}
       <span>PAGE {pageNumber}</span>
-      {
-        limit >= 100 && (
-          // || (count > 1 && (
-          <button
-            onClick={() => {
-              setPageNumber(pageNumber + 1);
-            }}
-          >
-            {pageNumber + 1} 🢖
-          </button>
-        )
-        //   ))
-      }
+      {limit >= 100 && (
+        <button
+          onClick={() => {
+            setPageNumber(pageNumber + 1);
+          }}
+        >
+          {pageNumber + 1} 🢖
+        </button>
+      )}
     </div>
   );
 };
