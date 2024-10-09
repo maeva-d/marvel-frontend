@@ -4,18 +4,18 @@ import "./styles.scss";
 import "./favorites.scss";
 // pictures
 import heart from "../assets/heart-icon.png";
+// Components
+import Pagination from "../Components/Pagination";
 
 const Favorites = () => {
   const [display, setDisplay] = useState("flex");
   const [page, setPage] = useState(1);
+
   // console.log(localStorage.length); // Ca existe ?!
   let arr = [];
-
   for (let i = 0; i < localStorage.length; i++) {
     arr.push(JSON.parse(localStorage.getItem(localStorage.key(i))));
   }
-
-  // console.log("arr", arr);
 
   const handleFavorites = (fav) => {
     // Je veux récupérer une clé
@@ -36,27 +36,13 @@ const Favorites = () => {
       <div className="container">
         <nav>
           <h1>Your favorites</h1>
-          <div>
-            {page > 1 && (
-              <button
-                onClick={() => {
-                  setPage(page - 1);
-                }}
-              >
-                🢔 {page - 1}
-              </button>
-            )}
-            <span>PAGE {page}</span>
-            {arr.length > 100 && (
-              <button
-                onClick={() => {
-                  setPage(page + 1);
-                }}
-              >
-                {page + 1} 🢖
-              </button>
-            )}
-          </div>
+          {arr.length > 0 && (
+            <Pagination
+              limit={arr.length}
+              pageNumber={page}
+              setPageNumber={setPage}
+            ></Pagination>
+          )}
           <p>Favorites saved: {arr.length} </p>
         </nav>
 
@@ -90,27 +76,13 @@ const Favorites = () => {
           })}
         </menu>
         <nav>
-          <div>
-            {page > 1 && (
-              <button
-                onClick={() => {
-                  setPage(page - 1);
-                }}
-              >
-                🢔 {page - 1}
-              </button>
-            )}
-            <span>PAGE {page}</span>
-            {arr.length > 100 && (
-              <button
-                onClick={() => {
-                  setPage(page + 1);
-                }}
-              >
-                {page + 1} 🢖
-              </button>
-            )}
-          </div>
+          {arr.length > 10 && (
+            <Pagination
+              limit={arr.length}
+              pageNumber={page}
+              setPageNumber={setPage}
+            ></Pagination>
+          )}
         </nav>
       </div>
     </main>

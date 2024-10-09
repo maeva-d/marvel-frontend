@@ -69,14 +69,14 @@ const Comics = () => {
       />
       <h3>{`Results found : ${data.count}`}</h3>
       <h1>Comics</h1>
-      {/* {data.count !== 0 && ( */}
-      <Pagination
-        limit={data.limit}
-        // count={data.count}
-        pageNumber={page}
-        setPageNumber={setPage}
-      ></Pagination>
-      {/* )} */}
+      {data.count > 0 && (
+        <Pagination
+          limit={data.limit}
+          // count={data.count}
+          pageNumber={page}
+          setPageNumber={setPage}
+        ></Pagination>
+      )}
 
       {data.count === 0 ? (
         <NoResults></NoResults>
