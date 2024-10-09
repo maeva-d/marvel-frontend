@@ -1,10 +1,7 @@
-// import "./App.scss";
 // yarn add axios react-router-dom
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
 // Components
 import Header from "./Components/Header";
-
 // pages
 import Characters from "./pages/Characters";
 import ComicsPerCharacter from "./pages/ComicsPerCharacter";
