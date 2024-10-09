@@ -7,6 +7,7 @@ import "./characters-and-comics.scss";
 // pictures
 import heart from "../assets/heart-icon.png";
 import hulkWalking from "../assets/hulk-walking.gif";
+import angryHulk from "../assets/hulk-unsplash.jpg";
 // Components
 import Pagination from "../Components/Pagination";
 
@@ -34,7 +35,6 @@ const Characters = () => {
       try {
         const response = await axios.get(url);
         setData(response.data);
-        // console.log("characeters page data =>", data);
         setIsLoading(false);
       } catch (error) {
         console.log(error.response.data);
@@ -72,6 +72,7 @@ const Characters = () => {
         }}
       />
       <h3>{`Results found : ${data.count}`}</h3>
+      <h1>Characters</h1>
       <Pagination
         limit={data.limit}
         // count={data.count}
@@ -79,41 +80,49 @@ const Characters = () => {
         setPageNumber={setPage}
       ></Pagination>
 
-      <h1>Characters</h1>
-      <section>
-        {data.results.map((character) => {
-          return (
-            <Link
-              to={`comics/${character._id}?apiKey=${
-                import.meta.env.VITE_API_KEY
-              }`}
-              key={character._id}
-            >
-              <article key={character._id} className="cards pointer">
-                <div>
-                  <img
-                    className="heart-icon"
-                    // style={{ opacity: added }}
-                    onClick={(event) => {
-                      event.preventDefault();
-                      handleFavorites(character);
-                    }}
-                    src={heart}
-                    alt="heart-icon"
-                  />
-                  <img
-                    src={`${character.thumbnail.path}.${character.thumbnail.extension}`}
-                    alt={character.name}
-                  />
-                  <h2>{character.name}</h2>
-                </div>
+      {data.count === 0 ? (
+        <div className="no-results">
+          <p>No results were found :/</p>
+          <img alt="angry-hulk" src={angryHulk} />
+        </div>
+      ) : (
+        <section>
+          {data.results.map((character) => {
+            return (
+              <Link
+                to={`comics/${character._id}?apiKey=${
+                  import.meta.env.VITE_API_KEY
+                }`}
+                key={character._id}
+              >
+                <article key={character._id} className="cards pointer">
+                  <div>
+                    <img
+                      className="heart-icon"
+                      // style={{ opacity: added }}
+                      onClick={(event) => {
+                        event.preventDefault();
+                        handleFavorites(character);
+                      }}
+                      src={heart}
+                      alt="heart-icon"
+                    />
+                    <img
+                      src={`${character.thumbnail.path}.${character.thumbnail.extension}`}
+                      alt={character.name}
+                    />
+                    <h2>{character.name}</h2>
+                  </div>
 
-                {character.description !== "" && <p>{character.description}</p>}
-              </article>
-            </Link>
-          );
-        })}
-      </section>
+                  {character.description !== "" && (
+                    <p>{character.description}</p>
+                  )}
+                </article>
+              </Link>
+            );
+          })}
+        </section>
+      )}
       {/* S'il n'y a aucun résultat, pas besoin de mettre une autre pagination en bas de la page */}
       {data.count > 0 && (
         <Pagination
