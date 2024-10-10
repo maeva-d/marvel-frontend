@@ -1,4 +1,5 @@
 import { useState } from "react";
+import handleFavorites from "../handleFavorites";
 // styles
 import "../common-elements.scss";
 import "./favorites.scss";
@@ -16,19 +17,19 @@ const Favorites = () => {
     arr.push(JSON.parse(localStorage.getItem(localStorage.key(i))));
   }
 
-  const handleFavorites = (fav) => {
-    // Je veux récupérer une clé
-    const itemToFind = JSON.parse(localStorage.getItem(fav._id));
-    if (itemToFind === null) {
-      // console.log("ajouté dans mon local storage ", itemToFind);
-      localStorage.setItem(fav._id, JSON.stringify(fav));
-      setDisplay("flex");
-    } else {
-      // console.log("supprimé du local storage ", fav._id);
-      localStorage.removeItem(fav._id);
-      setDisplay("none");
-    }
-  };
+  // const handleFavorites = (fav) => {
+  //   // Je veux récupérer une clé
+  //   const itemToFind = JSON.parse(localStorage.getItem(fav._id));
+  //   if (itemToFind === null) {
+  //     // console.log("ajouté dans mon local storage ", itemToFind);
+  //     localStorage.setItem(fav._id, JSON.stringify(fav));
+  //     setDisplay("flex");
+  //   } else {
+  //     // console.log("supprimé du local storage ", fav._id);
+  //     localStorage.removeItem(fav._id);
+  //     setDisplay("none");
+  //   }
+  // };
 
   return (
     <main className="layout">
@@ -55,7 +56,7 @@ const Favorites = () => {
                   <HeartIcon
                     onClick={(event) => {
                       event.preventDefault();
-                      handleFavorites(fav);
+                      handleFavorites(fav, display, setDisplay);
                     }}
                   ></HeartIcon>
                 </div>

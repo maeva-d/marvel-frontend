@@ -1,6 +1,7 @@
 // import { useDebounce } from "use-debounce";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import handleFavorites from "../handleFavorites";
 // styles
 import "../common-elements.scss";
 import "./characters-and-comics.scss";
@@ -42,17 +43,17 @@ const Comics = () => {
     fetchData();
   }, [search, page]); // la requête se relancera à chaque changement de state de search qu'elle prendra en compte
 
-  const handleFavorites = (comic) => {
-    // Je veux récupérer une clé
-    const itemToFind = JSON.parse(localStorage.getItem(comic._id));
-    if (itemToFind === null) {
-      // console.log("ajouté dans mon local storage ", itemToFind);
-      localStorage.setItem(comic._id, JSON.stringify(comic));
-    } else {
-      // console.log("supprimé du local storage ", comic._id);
-      localStorage.removeItem(comic._id);
-    }
-  };
+  // const handleFavorites = (comic) => {
+  //   // Je veux récupérer une clé
+  //   const itemToFind = JSON.parse(localStorage.getItem(comic._id));
+  //   if (itemToFind === null) {
+  //     // console.log("ajouté dans mon local storage ", itemToFind);
+  //     localStorage.setItem(comic._id, JSON.stringify(comic));
+  //   } else {
+  //     // console.log("supprimé du local storage ", comic._id);
+  //     localStorage.removeItem(comic._id);
+  //   }
+  // };
 
   return isLoading ? (
     <Loading />

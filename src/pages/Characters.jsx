@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import handleFavorites from "../handleFavorites";
 // styles
 import "../common-elements.scss";
 import "./characters-and-comics.scss";
@@ -42,17 +43,17 @@ const Characters = () => {
     fetchData();
   }, [search, page]); // la requête se relancera à chaque changement de state de search et prendra en compte l'input
 
-  const handleFavorites = (character) => {
-    // Je veux récupérer une clé
-    const itemToFind = JSON.parse(localStorage.getItem(character._id));
-    if (itemToFind === null) {
-      // console.log("ajouté dans mon local storage ", itemToFind);
-      localStorage.setItem(character._id, JSON.stringify(character));
-    } else {
-      // console.log("supprimé du local storage ", character._id);
-      localStorage.removeItem(character._id);
-    }
-  };
+  // const handleFavorites = (character) => {
+  //   // Je veux récupérer une clé
+  //   const itemToFind = JSON.parse(localStorage.getItem(character._id));
+  //   if (itemToFind === null) {
+  //     // console.log("ajouté dans mon local storage ", itemToFind);
+  //     localStorage.setItem(character._id, JSON.stringify(character));
+  //   } else {
+  //     // console.log("supprimé du local storage ", character._id);
+  //     localStorage.removeItem(character._id);
+  //   }
+  // };
 
   return isLoading ? (
     <Loading />
