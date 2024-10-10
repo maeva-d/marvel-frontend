@@ -22,40 +22,46 @@
     div {
       a {
         text-decoration: none;
-      }
 
-      button {
-        background-color: white;
-        color: #ee171f;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-        border: none;
-        font-weight: bold;
-        padding: 8px 16px;
-        transition: all 0.5s;
-        position: relative;
-        margin-left: 16px;
-        border-radius: 5px;
-        &:hover {
-          padding-right: 24px;
-          padding-left: 8px;
-          background-color: #ee171f;
-          color: white;
-          cursor: pointer;
-        }
-        &:after {
-          content: "»";
-          position: absolute;
-          opacity: 0;
-          top: 6px;
-          right: -10px;
-          transition: 0.2s;
-        }
-        &:hover:after {
-          opacity: 1;
-          right: 10px;
+        button {
+          text-transform: uppercase;
+          background-color: white;
+          color: #ee171f;
+          letter-spacing: 3px;
+          border: none;
+          font-weight: bold;
+          padding: 8px 16px;
+          transition: all 0.5s;
+          position: relative;
+          margin-left: 16px;
+          border-radius: 5px;
+          &:hover {
+            padding-right: 24px;
+            padding-left: 8px;
+            background-color: #ee171f;
+            color: white;
+            cursor: pointer;
+          }
+          &:after {
+            content: "»";
+            position: absolute;
+            opacity: 0;
+            top: 6px;
+            right: -10px;
+            transition: 0.2s;
+          }
+          &:hover:after {
+            opacity: 1;
+            right: 10px;
+          }
         }
       }
     }
+  }
+}
+
+@media (max-width: 1200px) {
+  .header-component {
+    background: linear-gradient(to right, #ee171f 18%, #ffa7aa 40%, white 56%);
   }
 }

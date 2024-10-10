@@ -34,7 +34,6 @@ const Comics = () => {
       try {
         const response = await axios.get(url);
         setData(response.data);
-        // console.log("comics page data =>", data);
         setIsLoading(false);
       } catch (error) {
         console.log(error);
