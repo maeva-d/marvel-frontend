@@ -1,5 +1,5 @@
-// import ".App.css";
 import "./header.scss";
+import "../common-elements.scss";
 import { Link } from "react-router-dom";
 import marvel from "../assets/logo-marvel.png";
 

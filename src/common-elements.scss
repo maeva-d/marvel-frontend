@@ -12,3 +12,12 @@
 .pointer {
   cursor: pointer;
 }
+
+@media (max-width: 1200px) {
+  .container {
+    width: 1024px;
+  }
+}
+
+// max-width: 640px;
+// md (768px)	max-width: 768px;
