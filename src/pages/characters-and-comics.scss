@@ -50,7 +50,6 @@
     }
   }
 }
-// }
 
 // Complete cards for character, comics and comics per character pages
 .cards {
@@ -96,4 +95,58 @@
     font-weight: 300;
     color: rgb(31, 17, 17);
   }
+}
+
+// Dois rapeticer les cards à partir de ce breakpoint
+@media (max-width: 768px) {
+  .characters-and-comics {
+    input {
+      width: 500px;
+    }
+
+    h1 {
+      font-size: 40px;
+      line-height: 90px;
+    }
+  }
+
+  .cards {
+    width: 500px;
+    div {
+      img:nth-of-type(2) {
+        width: 200px;
+        height: 200px;
+      }
+    }
+
+    p {
+      font-size: 18px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  // .characters-and-comics {
+  //   input {
+  //     width: 500px;
+  //   }
+
+  //   h1 {
+  //     font-size: 40px;
+  //     line-height: 90px;
+  //   }
+  // }
+  // .cards {
+  //   width: 500px;
+  //   div {
+  //     img:nth-of-type(2) {
+  //       width: 200px;
+  //       height: 200px;
+  //     }
+  //   }
+
+  //   p {
+  //     font-size: 18px;
+  //   }
+  // }
 }

@@ -34,25 +34,13 @@ const ComicsPerCharacter = () => {
     fetchData();
   }, [characterId, page]);
 
-  // const handleFavorites = (comic) => {
-  //   // Je veux récupérer une clé
-  //   const itemToFind = JSON.parse(localStorage.getItem(comic._id));
-  //   if (itemToFind === null) {
-  //     // console.log("ajouté dans mon local storage ", itemToFind);
-  //     localStorage.setItem(comic._id, JSON.stringify(comic));
-  //   } else {
-  //     // console.log("supprimé du local storage ", comic._id);
-  //     localStorage.removeItem(comic._id);
-  //   }
-  // };
-
   return isLoading ? (
     <Loading />
   ) : (
     <main className="layout">
       <div className="container characters-and-comics">
         <h3>{`Results found : ${data.comics.length}`}</h3>
-        <h1>{`Here is a list of all the comics ${data.name} is featured in :`}</h1>
+        <h1>{`All the comics ${data.name} is featured in :`}</h1>
         <Pagination
           limit={data.comics.length}
           pageNumber={page}
