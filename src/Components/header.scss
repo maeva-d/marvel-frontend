@@ -72,7 +72,7 @@
 
 @media (max-width: 992px) {
   .header-component {
-    background: linear-gradient(to right, #ee171f 18%, #ffa7aa 40%, white 56%);
+    background: linear-gradient(to right, #ee171f 30%, #ffa7aa 40%, white 70%);
   }
 }
 
@@ -124,8 +124,12 @@
   }
 }
 
-// @media (max-width: 576px) {
-//   .header-component {
-//     // width: 470px; // ???
-//   }
-// }
+@media (max-width: 576px) {
+  .header-component {
+    background: linear-gradient(to left, #ee171f 45%, #ffa7aa 60%, white 78%);
+
+    nav {
+      justify-content: flex-end;
+    }
+  }
+}
