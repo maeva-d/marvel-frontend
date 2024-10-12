@@ -34,8 +34,11 @@ const Favorites = () => {
   return (
     <main className="layout">
       <div className="container favorites">
-        <nav>
+        <div>
           <h1>Your favorites</h1>
+          <p>Favorites saved: {arr.length} </p>
+        </div>
+        <nav>
           {arr.length > 0 && (
             <Pagination
               limit={arr.length}
@@ -43,7 +46,6 @@ const Favorites = () => {
               setPageNumber={setPage}
             ></Pagination>
           )}
-          <p>Favorites saved: {arr.length} </p>
         </nav>
 
         <menu>
@@ -70,7 +72,7 @@ const Favorites = () => {
           })}
         </menu>
         <nav>
-          {arr.length >= 12 && (
+          {arr.length >= 10 && (
             <Pagination
               limit={arr.length}
               pageNumber={page}

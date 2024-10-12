@@ -1,9 +1,9 @@
 .favorites {
-  nav {
+  div {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 150px;
+    height: 80px;
 
     h1 {
       font-family: "Bangers", system-ui;
@@ -22,15 +22,21 @@
     }
   }
 
-  nav:nth-of-type(2) {
-    justify-content: center;
-    height: unset;
+  // La pagination, qui aura des propriétés légèrements différentes
+  nav {
+    div {
+      justify-content: center;
+      height: unset;
+      margin: 0 0 32px 0;
+    }
   }
 
   menu {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 32px;
+    // justify-content: space-between;
   }
 }
 
@@ -49,7 +55,7 @@
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   }
   > img {
-    height: 200px;
+    height: 300px;
     width: 100%;
     border-radius: 8px;
     object-fit: cover;
@@ -60,7 +66,6 @@
     align-items: center;
     justify-content: space-between;
     height: 40px;
-    position: relative;
 
     > span {
       display: block;
@@ -70,6 +75,13 @@
       letter-spacing: 2px;
       word-spacing: 4px;
       font-size: 18px;
+    }
+
+    // l'icone coeur, qui aura des propriétés légèrements différentes
+    > img {
+      position: unset;
+      top: unset;
+      right: unset;
     }
   }
 
@@ -82,5 +94,102 @@
     margin: 16px 0;
     line-height: 40px;
     text-align: center;
+  }
+}
+
+@media (max-width: 1200px) {
+  .favorite-card {
+    width: calc(28% - 16px);
+  }
+}
+
+@media (max-width: 992px) {
+  .favorites {
+    menu {
+      justify-content: space-between;
+    }
+  }
+  .favorite-card {
+    width: calc(43% - 16px);
+  }
+}
+
+@media (max-width: 640px) {
+  .favorite-card {
+    margin: 16px;
+    padding: 16px;
+    width: calc(45% - 16px);
+  }
+}
+
+@media (max-width: 576px) {
+  .favorites {
+    div {
+      h1 {
+        font-size: 40px;
+      }
+    }
+    menu {
+      gap: 8px;
+    }
+  }
+
+  .favorite-card {
+    width: calc(43% - 8px);
+
+    div {
+      span {
+        font-size: 17px;
+      }
+    }
+  }
+}
+
+@media (max-width: 470px) {
+  .favorites {
+    menu {
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-items: center;
+    }
+    > div {
+      // flex-direction: column;
+      // // height: unset;
+      // justify-content: unset;
+      // align-items: unset;
+
+      h1 {
+        font-size: 35px;
+      }
+
+      p {
+        letter-spacing: 1px;
+        word-spacing: 2px;
+      }
+    }
+  }
+
+  .favorite-card {
+    width: 280px;
+  }
+}
+
+@media (max-width: 360px) {
+  .favorites {
+    > div {
+      flex-direction: column;
+      height: 150px;
+      justify-content: center;
+
+      h1 {
+        margin-bottom: 16px;
+      }
+
+      p {
+        font-size: 15px;
+        letter-spacing: unset;
+        word-spacing: unset;
+      }
+    }
   }
 }
