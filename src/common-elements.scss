@@ -43,6 +43,24 @@
 
 @media (max-width: 576px) {
   .container {
-    width: 470px; // ???
+    width: 470px;
+  }
+}
+
+@media (max-width: 470px) {
+  .container {
+    width: 430px;
+  }
+}
+
+@media (max-width: 430px) {
+  .container {
+    width: 400px;
+  }
+}
+
+@media (max-width: 360px) {
+  .container {
+    width: 340px;
   }
 }

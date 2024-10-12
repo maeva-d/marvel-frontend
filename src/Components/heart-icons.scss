@@ -1,7 +1,7 @@
 .heart-icon {
   width: 30px;
   height: 30px;
-  margin-left: 8px;
+  margin: 0 0 8px 16px;
   position: absolute;
   top: 0;
   right: 0;
@@ -12,5 +12,22 @@
   }
   &:active {
     transform: scale(1.02);
+  }
+}
+
+@media (max-width: 640px) {
+  .heart-icon {
+    margin: unset;
+    top: 16px;
+    right: 16px;
+  }
+}
+
+@media (max-width: 430px) {
+  .heart-icon {
+    top: 10px;
+    right: 10px;
+    width: 24px;
+    height: 24px;
   }
 }
