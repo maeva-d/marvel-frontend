@@ -34,7 +34,7 @@ const Comics = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(url);
-        console.log(response.data);
+        // console.log(response.data);
         setData(response.data);
         setIsLoading(false);
       } catch (error) {
@@ -104,7 +104,6 @@ const Comics = () => {
           </section>
         )}
       </div>
-      {/* S'il n'y a aucun résultat, pas besoin de mettre une autre pagination en bas de la page */}
       {data.count > 0 && (
         <Pagination
           limit={data.limit}

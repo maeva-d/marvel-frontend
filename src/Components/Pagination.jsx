@@ -9,7 +9,7 @@ const Pagination = ({ limit, pageNumber, setPageNumber }) => {
             setPageNumber(pageNumber - 1);
           }}
         >
-          🢔 {pageNumber - 1}
+          ⇠ {pageNumber - 1}
         </button>
       )}
       <span>PAGE {pageNumber}</span>
@@ -19,7 +19,7 @@ const Pagination = ({ limit, pageNumber, setPageNumber }) => {
             setPageNumber(pageNumber + 1);
           }}
         >
-          {pageNumber + 1} 🢖
+          {pageNumber + 1} ⇢
         </button>
       )}
     </div>

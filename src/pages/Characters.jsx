@@ -43,18 +43,6 @@ const Characters = () => {
     fetchData();
   }, [search, page]); // la requête se relancera à chaque changement de state de search et prendra en compte l'input
 
-  // const handleFavorites = (character) => {
-  //   // Je veux récupérer une clé
-  //   const itemToFind = JSON.parse(localStorage.getItem(character._id));
-  //   if (itemToFind === null) {
-  //     // console.log("ajouté dans mon local storage ", itemToFind);
-  //     localStorage.setItem(character._id, JSON.stringify(character));
-  //   } else {
-  //     // console.log("supprimé du local storage ", character._id);
-  //     localStorage.removeItem(character._id);
-  //   }
-  // };
-
   return isLoading ? (
     <Loading />
   ) : (
@@ -114,7 +102,6 @@ const Characters = () => {
             })}
           </section>
         )}
-        {/* S'il n'y a aucun résultat, pas besoin de mettre une autre pagination en bas de la page */}
         {data.count > 0 && (
           <Pagination
             limit={data.limit}
