@@ -6,10 +6,10 @@ import handleFavorites from "../handleFavorites";
 import "../common-elements.scss";
 import "./characters-and-comics.scss";
 // Components
-import Loading from "../Components/Loading";
-import NoResults from "../Components/NoResults";
-import Pagination from "../Components/Pagination";
-import HeartIcon from "../Components/heartIcons";
+import Loading from "../Components/loading/Loading";
+import NoResults from "../Components/no-results/NoResults";
+import Pagination from "../Components/pagination/Pagination";
+import HeartIcon from "../Components/heart-icon/heartIcons";
 
 // require("dotenv").config();
 

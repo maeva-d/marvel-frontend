@@ -1,4 +1,4 @@
-import heart from "../assets/heart-icon.png";
+import heart from "../../assets/heart-icon.png";
 import "./heart-icons.scss";
 
 const HeartIcon = ({ onClick }) => {

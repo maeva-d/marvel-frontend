@@ -4,8 +4,8 @@ import handleFavorites from "../handleFavorites";
 import "../common-elements.scss";
 import "./favorites.scss";
 // Components
-import Pagination from "../Components/Pagination";
-import HeartIcon from "../Components/heartIcons";
+import Pagination from "../Components/pagination/Pagination";
+import HeartIcon from "../Components/heart-icon/heartIcons";
 
 const Favorites = () => {
   const [display, setDisplay] = useState("flex");
@@ -16,20 +16,6 @@ const Favorites = () => {
   for (let i = 0; i < localStorage.length; i++) {
     arr.push(JSON.parse(localStorage.getItem(localStorage.key(i))));
   }
-
-  // const handleFavorites = (fav) => {
-  //   // Je veux récupérer une clé
-  //   const itemToFind = JSON.parse(localStorage.getItem(fav._id));
-  //   if (itemToFind === null) {
-  //     // console.log("ajouté dans mon local storage ", itemToFind);
-  //     localStorage.setItem(fav._id, JSON.stringify(fav));
-  //     setDisplay("flex");
-  //   } else {
-  //     // console.log("supprimé du local storage ", fav._id);
-  //     localStorage.removeItem(fav._id);
-  //     setDisplay("none");
-  //   }
-  // };
 
   return (
     <main className="layout">

@@ -1,10 +1,10 @@
-import "../common-elements.scss";
+import "../../common-elements.scss";
 import "./header.scss";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
-import NavModal from "./navigation/NavModal";
-import marvel from "../assets/logo-marvel.png";
+import NavModal from "../navigation/NavModal";
+import marvel from "../../assets/logo-marvel.png";
 
 const Header = () => {
   const [showModal, setShowModal] = useState(false);

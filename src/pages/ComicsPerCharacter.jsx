@@ -6,9 +6,9 @@ import handleFavorites from "../handleFavorites";
 import "../common-elements.scss";
 import "./characters-and-comics.scss";
 // Components
-import Loading from "../Components/Loading";
-import Pagination from "../Components/Pagination";
-import HeartIcon from "../Components/heartIcons";
+import Loading from "../Components/loading/Loading";
+import Pagination from "../Components/pagination/Pagination";
+import HeartIcon from "../Components/heart-icon/heartIcons";
 
 const ComicsPerCharacter = () => {
   const [data, setData] = useState();
