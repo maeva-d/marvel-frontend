@@ -22,44 +22,48 @@
       height: 62px;
       object-fit: contain;
     }
+  }
+}
 
-    div {
-      a {
-        text-decoration: none;
+// Classes pour les boutons, avec une classe générale et deux classes précises selon la taille de l'écran (header ou modal)
+.links {
+  text-decoration: none;
 
-        button {
-          text-transform: uppercase;
-          background-color: white;
-          color: #ee171f;
-          letter-spacing: 3px;
-          border: none;
-          font-weight: bold;
-          padding: 8px 16px;
-          transition: all 0.5s;
-          position: relative;
-          border-radius: 5px;
-          margin-left: 16px;
-          &:hover {
-            padding-right: 24px;
-            padding-left: 8px;
-            background-color: #ee171f;
-            color: white;
-            cursor: pointer;
-          }
-          &:after {
-            content: "»";
-            position: absolute;
-            opacity: 0;
-            top: 6px;
-            right: -10px;
-            transition: 0.2s;
-          }
-          &:hover:after {
-            opacity: 1;
-            right: 10px;
-          }
-        }
-      }
+  button {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border: none;
+    font-weight: bold;
+    padding: 8px 16px;
+    transition: all 0.5s;
+    position: relative;
+    border-radius: 5px;
+    &:hover {
+      padding-right: 24px;
+      padding-left: 8px;
+      cursor: pointer;
+    }
+    &:after {
+      content: "»";
+      position: absolute;
+      opacity: 0;
+      top: 6px;
+      right: -10px;
+      transition: 0.2s;
+    }
+    &:hover:after {
+      opacity: 1;
+      right: 10px;
+    }
+  }
+
+  .buttons-in-header {
+    margin-left: 16px;
+    background-color: white;
+    color: #ee171f;
+    &:hover {
+      background-color: #ee171f;
+      color: white;
     }
   }
 }
@@ -85,12 +89,6 @@
       img {
         height: 56px;
       }
-
-      div {
-        button {
-          margin-left: 8px;
-        }
-      }
     }
   }
 }
@@ -115,6 +113,7 @@
         display: block;
         position: absolute;
         left: 32px;
+        cursor: pointer;
       }
 
       div {

@@ -1,6 +1,7 @@
 // import { useDebounce } from "use-debounce";
 import axios from "axios";
 import { useState, useEffect } from "react";
+// import { ReactSearchAutocomplete } from "react-search-autocomplete";
 import handleFavorites from "../handleFavorites";
 // styles
 import "../common-elements.scss";
@@ -33,6 +34,7 @@ const Comics = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(url);
+        console.log(response.data);
         setData(response.data);
         setIsLoading(false);
       } catch (error) {
@@ -42,17 +44,15 @@ const Comics = () => {
     fetchData();
   }, [search, page]); // la requête se relancera à chaque changement de state de search qu'elle prendra en compte
 
-  // const handleFavorites = (comic) => {
-  //   // Je veux récupérer une clé
-  //   const itemToFind = JSON.parse(localStorage.getItem(comic._id));
-  //   if (itemToFind === null) {
-  //     // console.log("ajouté dans mon local storage ", itemToFind);
-  //     localStorage.setItem(comic._id, JSON.stringify(comic));
-  //   } else {
-  //     // console.log("supprimé du local storage ", comic._id);
-  //     localStorage.removeItem(comic._id);
-  //   }
-  // };
+  // const searchItem = [{id: }]
+
+  // for (let i = 0; i < data.results[i]._id; i++) {
+  //   const searchItem = [{id : data.results[i]._id}, {name : data.results[i].title}];
+  // }
+
+  // const handleResearch = (str, results) => {
+
+  // }
 
   return isLoading ? (
     <Loading />

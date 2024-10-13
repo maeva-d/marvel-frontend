@@ -36,7 +36,6 @@
     flex-wrap: wrap;
     gap: 16px;
     margin-bottom: 32px;
-    // justify-content: space-between;
   }
 }
 
@@ -153,11 +152,6 @@
       align-items: center;
     }
     > div {
-      // flex-direction: column;
-      // // height: unset;
-      // justify-content: unset;
-      // align-items: unset;
-
       h1 {
         font-size: 35px;
       }
@@ -181,14 +175,12 @@
       height: 150px;
       justify-content: center;
 
-      h1 {
+      > h1 {
         margin-bottom: 16px;
       }
 
-      p {
+      > p {
         font-size: 15px;
-        letter-spacing: unset;
-        word-spacing: unset;
       }
     }
   }

@@ -1,13 +1,30 @@
-import "./header.scss";
 import "../common-elements.scss";
+import "./header.scss";
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
+import NavModal from "./navigation/NavModal";
 import marvel from "../assets/logo-marvel.png";
 
 const Header = () => {
+  const [showModal, setShowModal] = useState(false);
+
+  useEffect(() => {
+    if (showModal) {
+      document.body.style.overflow = "hidden";
+      return () => {
+        document.body.style.overflow = "scroll";
+      };
+    }
+  }, [showModal]);
+
+  const modalRoot = document.getElementById("modal");
+
   return (
     <header className="header-component">
       <nav className="container">
         <svg
+          onClick={() => setShowModal(true)}
           width="24"
           height="24"
           viewBox="0 0 24 24"
@@ -24,16 +41,21 @@ const Header = () => {
         </svg>
         <img src={marvel} alt="marvel-logo" />
         <div>
-          <Link to="/">
-            <button>Characters</button>
+          <Link to="/" className="links">
+            <button className="buttons-in-header">Characters</button>
           </Link>
-          <Link to="/comics">
-            <button>Comics</button>
+          <Link to="/comics" className="links">
+            <button className="buttons-in-header">Comics</button>
           </Link>
-          <Link to="/favorites">
-            <button>Favorites</button>
+          <Link to="/favorites" className="links">
+            <button className="buttons-in-header">Favorites</button>
           </Link>
         </div>
+        {showModal &&
+          createPortal(
+            <NavModal onClose={() => setShowModal(false)} />,
+            modalRoot
+          )}
       </nav>
     </header>
   );
