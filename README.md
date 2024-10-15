@@ -45,14 +45,14 @@
 
 ## À propos du projet
 
-"L'univers Marvel" est un projet où je laisse carte blanche à ma créativité : sans maquette, et en 3 jours seulement, j'avais comme défis de réfléchir à l'UI du projet, en respectant certains principes comme celui du design system.
-Dans ce projet, l'utilisateur (re)découvre de façon concise mais exsaustive les personnages et les comics Marvel.
+"L'univers Marvel" est un projet où je laisse carte blanche à ma créativité : sans maquette, et en 3 jours seulement, j'avais comme défis de réfléchir à l'UI du projet (je ne suis pas du tout desgineuse, à part des bases sur Figma), en respectant certains principes comme celui du design system.
+Dans ce projet, l'utilisateur (re)découvre de façon concise mais exhaustive les personnages et les comics Marvel.
 L'utilisateur peut entre autre :
 
 - parcourir les pages `characters`, `comics` et `favorites`
-- Sur les pages characters et comics, l'utilisateur peut rechercher le nom d'un personnage et d'un comics.
-- Dans la page characters, l'utilisateur peut accéder à la liste de tous les comics dans lequel apparaît un personnage en particulier: il suffit de cliquer sur la card du personnage en question.
-- Sur n'importe quelle page, l'utilisateur peut mettre un personnage ou un comic en favoris, en cliquant sur l'icône coeur. Tous ses favoris seront listés dans la pages favorites.
+- Sur les pages `characters` et `comics`, l'utilisateur peut rechercher le nom d'un personnage et d'un comics.
+- Dans la page `characters`, l'utilisateur peut accéder à la liste de tous les comics dans lequel apparaît un personnage en particulier: il suffit de cliquer sur la card du personnage en question.
+- Sur n'importe quelle page, l'utilisateur peut mettre un personnage ou un comic en favoris, en cliquant sur l'icône coeur. Tous ses favoris seront listés dans la pages `favorites`.
 
 Ce projet full-stack interroge une API à l'aide d'une clé, afin de créer un back-end intermédiaire pour les requêtes côté front.
 
@@ -72,7 +72,7 @@ Ce projet full-stack interroge une API à l'aide d'une clé, afin de créer un b
 <p text-align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
-
+<!--
 ## Getting Started
 
 This is an example of how you may give instructions on setting up your project locally.
@@ -87,7 +87,7 @@ This is an example of how to list things you need to use the software and how to
   npm install npm@latest -g
   ```
 
-<p text-align="right">(<a href="#readme-top">back to top</a>)</p>
+<p text-align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 <!-- USAGE EXAMPLES -->
 
@@ -103,12 +103,12 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 ## Roadmap
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-  - [ ] Nested Feature
+Voici quelques recommendations qui m'ont été faites (merci pour les feedbacks 🙏) et que j'aimerais implémenter:
 
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
+- [ ] Rendre plus explicite pour l'utilisateur les events qui sont trigger par l'ajout / le retrait de favoris
+- [ ] Quand l'utilisateur clique sur une card dans ses favoris, il est redirigé sur la card en question, pour avoir accès à toutes les informations.
+- [ ] Barre de recherche avec autocomplétion
+<!-- - [ ] Nested Feature -->
 
 <p text-align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -116,9 +116,9 @@ See the [open issues](https://github.com/github_username/repo_name/issues) for a
 
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+<!-- Maeva Delrue - [@twitter_handle](https://twitter.com/twitter_handle) -->
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Maeva Delrue - [linkedin-url](https://twitter.com/twitter_handle)
 
 <p text-align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -138,7 +138,7 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 [license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
 [license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
+[linkedin-url]: linkedin.com/in/maeva-d/
 [product-screenshot]: images/screenshot.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
