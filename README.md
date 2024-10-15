@@ -1,18 +1,7 @@
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
-
 <a id="readme-top"></a>
-
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
 
 <!-- PROJECT SHIELDS -->
 
-<!-- PROJECT LOGO -->
 <br />
 
 <!-- TABLE OF CONTENTS -->
@@ -25,14 +14,6 @@
         <li><a href="#built-with">Construit avec</a></li>
       </ul>
     </li>
-    <!-- <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li> -->
-        <!-- <li><a href="#installation">Installation</a></li> -->
-      <!-- </ul>
-    </li> -->
-    <!-- <li><a href="#usage">Usage</a></li> -->
     <li><a href="#roadmap">Roadmap</a></li>
   </ol>
 </details>
@@ -60,7 +41,7 @@ Ce projet full-stack interroge une API à l'aide d'une clé, afin de créer un b
 
 - [![Axios][Axios]][Axios-url]
 - [![React][React.js]][React-url]
-- [![React_Router][React_Router]][React_Router-url]
+- [![React Router][React_Router]][React_router-url]
 - [![Express][Express]][Express-url]
 - [![Node][Node.js]][Node-url]
 - [![SASS][SASS]][SASS-url]
@@ -115,8 +96,8 @@ Maeva Delrue - [![LinkedIn][linkedin-shield][linkedin-url]]
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
 
-[React_Router] : https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white
-[React_Router-url]: https://reactrouter.com/en/main
+[React Router] : https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white
+[React_router-url]: https://reactrouter.com/en/main
 
 <!-- EXPRESS -->
 
