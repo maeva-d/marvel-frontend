@@ -25,14 +25,14 @@
         <li><a href="#built-with">Construit avec</a></li>
       </ul>
     </li>
-    <li>
+    <!-- <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#prerequisites">Prerequisites</a></li> -->
         <!-- <li><a href="#installation">Installation</a></li> -->
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
+      <!-- </ul>
+    </li> -->
+    <!-- <li><a href="#usage">Usage</a></li> -->
     <li><a href="#roadmap">Roadmap</a></li>
     <!-- <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
@@ -45,11 +45,13 @@
 
 ## À propos du projet
 
-"L'univers Marvel" est un projet où je laisse carte blanche à ma créativité : sans maquette, et en 3 jours seulement, j'avais comme défis de réfléchir à l'UI du projet (je ne suis pas du tout desgineuse, à part des bases sur Figma), en respectant certains principes comme celui du design system.
+"L'univers Marvel" est un projet où je laisse carte blanche à ma créativité : sans maquette, et en 3 jours seulement, j'avais comme défis de réfléchir à la quasi intégralitée de l'UI du projet (je ne suis pas du tout desgineuse, à part des bases sur Figma).
+Cela inclut respecter certains principes, comme celui du design system.
+</br>
 Dans ce projet, l'utilisateur (re)découvre de façon concise mais exhaustive les personnages et les comics Marvel.
 L'utilisateur peut entre autre :
 
-- parcourir les pages `characters`, `comics` et `favorites`
+- Parcourir les pages `characters`, `comics` et `favorites`
 - Sur les pages `characters` et `comics`, l'utilisateur peut rechercher le nom d'un personnage et d'un comics.
 - Dans la page `characters`, l'utilisateur peut accéder à la liste de tous les comics dans lequel apparaît un personnage en particulier: il suffit de cliquer sur la card du personnage en question.
 - Sur n'importe quelle page, l'utilisateur peut mettre un personnage ou un comic en favoris, en cliquant sur l'icône coeur. Tous ses favoris seront listés dans la pages `favorites`.
@@ -60,7 +62,8 @@ Ce projet full-stack interroge une API à l'aide d'une clé, afin de créer un b
 
 ### Construit avec
 
-- [![Next][Next.js]][Next-url]
+<!-- - [![Next][Next.js]][Next-url] -->
+
 - [![React][React.js]][React-url]
 <!-- - [![Vue][Vue.js]][Vue-url]
 - [![Angular][Angular.io]][Angular-url]
@@ -118,11 +121,9 @@ Voici quelques recommendations qui m'ont été faites (merci pour les feedbacks 
 
 <!-- Maeva Delrue - [@twitter_handle](https://twitter.com/twitter_handle) -->
 
-Maeva Delrue - [linkedin-url](https://twitter.com/twitter_handle)
+Maeva Delrue - [[linkedin-shield][linkedin-url]]
 
 <p text-align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ACKNOWLEDGMENTS -->
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
