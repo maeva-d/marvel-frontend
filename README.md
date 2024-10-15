@@ -34,7 +34,6 @@
     </li> -->
     <!-- <li><a href="#usage">Usage</a></li> -->
     <li><a href="#roadmap">Roadmap</a></li>
-    <!-- <li><a href="#contributing">Contributing</
   </ol>
 </details>
 
@@ -72,7 +71,6 @@ Voici quelques recommendations qui m'ont été faites (merci pour les feedbacks 
 - [ ] Rendre plus explicite pour l'utilisateur les events qui sont trigger par l'ajout / le retrait de favoris
 - [ ] Quand l'utilisateur clique sur une card dans ses favoris, il est redirigé sur la card en question, pour avoir accès à toutes les informations.
 - [ ] Barre de recherche avec autocomplétion
-<!-- - [ ] Nested Feature -->
 
 <p text-align="right">(<a href="#readme-top">back to top</a>)</p>
 
