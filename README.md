@@ -60,6 +60,11 @@ Ce projet full-stack interroge une API à l'aide d'une clé, afin de créer un b
 
 - [![Axios][Axios]][Axios-url]
 - [![React][React.js]][React-url]
+- [![React Router][React Router]][React Router-url]
+- [![Express][Express]][Express-url]
+- [![Node][Node.js]][Node-url]
+- [![SASS][SASS]][SASS-url]
+- [![yarn][yarn.js]][yarn-url]
 
 <p text-align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -78,8 +83,6 @@ Voici quelques recommendations qui m'ont été faites (merci pour les feedbacks 
 <!-- CONTACT -->
 
 ## Contact
-
-<!-- Maeva Delrue - [@twitter_handle](https://twitter.com/twitter_handle) -->
 
 Maeva Delrue - [![LinkedIn][linkedin-shield][linkedin-url]]
 
@@ -111,15 +114,31 @@ Maeva Delrue - [![LinkedIn][linkedin-shield][linkedin-url]]
 
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
-[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
-[Vue-url]: https://vuejs.org/
-[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
-[Angular-url]: https://angular.io/
-[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
-[Svelte-url]: https://svelte.dev/
-[Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
-[Laravel-url]: https://laravel.com
-[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
+
+[React Router] : https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white
+[React Router-url]: https://reactrouter.com/en/main
+
+<!-- EXPRESS -->
+
+[Express]: https://img.shields.io/badge/Express%20js-000000?style=for-the-badge&logo=express&logoColor=white
+[Express-url]: https://expressjs.com/fr/
+
+<!-- NODE -->
+
+[Node.js]: https://img.shields.io/badge/Node%20js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white
+[node-url]: https://nodejs.org/en
+
+<!-- SCSS -->
+
+[SASS]: https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white
+[SASS-url]: https://sass-lang.com/documentation/
+
+<!-- YARN -->
+
+[yarn]: https://img.shields.io/badge/Yarn-2C8EBB?style=for-the-badge&logo=yarn&logoColor=white
+[yarn-url]: https://yarnpkg.com/
+
+<!-- [Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com
+[JQuery-url]: https://jquery.com -->
