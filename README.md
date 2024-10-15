@@ -41,7 +41,6 @@ Ce projet full-stack interroge une API à l'aide d'une clé, afin de créer un b
 
 - [![Axios][Axios]][Axios-url]
 - [![React][React.js]][React-url]
-- [![React Router][React_Router]][React_router-url]
 - [![Express][Express]][Express-url]
 - [![Node][Node.js]][Node-url]
 - [![SASS][SASS]][SASS-url]
@@ -65,7 +64,7 @@ Voici quelques recommendations qui m'ont été faites (merci pour les feedbacks 
 
 ## Contact
 
-Maeva Delrue - [![LinkedIn][linkedin-shield][linkedin-url]]
+linkedin.com/in/maeva-d/
 
 <p text-align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -95,9 +94,6 @@ Maeva Delrue - [![LinkedIn][linkedin-shield][linkedin-url]]
 
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
-
-[React Router] : https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white
-[React_router-url]: https://reactrouter.com/en/main
 
 <!-- EXPRESS -->
 
