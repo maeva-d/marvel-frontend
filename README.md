@@ -14,21 +14,6 @@
 
 <!-- PROJECT LOGO -->
 <br />
-<div align-items="center">
-
-<h3 align-items="center">L'Univers Marvel</h3>
-
-  <p align-items="center">
-    project_description
-    <br />
- -->
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
-  </p>
-</div>
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -37,14 +22,14 @@
     <li>
       <a href="#about-the-project">À propos du projet</a>
       <ul>
-        <li><a href="#built-with">Construit avex</a></li>
+        <li><a href="#built-with">Construit avec</a></li>
       </ul>
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <!-- <li><a href="#installation">Installation</a></li> -->
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
@@ -60,13 +45,20 @@
 
 ## À propos du projet
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+"L'univers Marvel" est un projet où je laisse carte blanche à ma créativité : sans maquette, et en 3 jours seulement, j'avais comme défis de réfléchir à l'UI du projet, en respectant certains principes comme celui du design system.
+Dans ce projet, l'utilisateur (re)découvre de façon concise mais exsaustive les personnages et les comics Marvel.
+L'utilisateur peut entre autre :
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+- parcourir les pages `characters`, `comics` et `favorites`
+- Sur les pages characters et comics, l'utilisateur peut rechercher le nom d'un personnage et d'un comics.
+- Dans la page characters, l'utilisateur peut accéder à la liste de tous les comics dans lequel apparaît un personnage en particulier: il suffit de cliquer sur la card du personnage en question.
+- Sur n'importe quelle page, l'utilisateur peut mettre un personnage ou un comic en favoris, en cliquant sur l'icône coeur. Tous ses favoris seront listés dans la pages favorites.
+
+Ce projet full-stack interroge une API à l'aide d'une clé, afin de créer un back-end intermédiaire pour les requêtes côté front.
 
 <p text-align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Built With
+### Construit avec
 
 - [![Next][Next.js]][Next-url]
 - [![React][React.js]][React-url]
@@ -99,13 +91,13 @@ This is an example of how to list things you need to use the software and how to
 
 <!-- USAGE EXAMPLES -->
 
-## Usage
+<!-- ## Usage
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
-<p text-align="right">(<a href="#readme-top">back to top</a>)</p>
+<p text-align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 <!-- ROADMAP -->
 
