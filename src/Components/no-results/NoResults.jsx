@@ -1,5 +1,5 @@
 import "./no-results.scss";
-import angryHulk from "../assets/hulk-unsplash.jpg";
+import angryHulk from "../../assets/hulk-unsplash.jpg";
 
 const NoResults = () => {
   return (
