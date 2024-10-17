@@ -1,5 +1,5 @@
 import "./loading.scss";
-import hulkWalking from "../assets/hulk-walking.gif";
+import hulkWalking from "../../assets/hulk-walking.gif";
 
 const Loading = () => {
   return (
