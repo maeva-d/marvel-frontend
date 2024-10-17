@@ -1,4 +1,3 @@
-import "../header.scss";
 import "./nav-modal.scss";
 import { Link } from "react-router-dom";
 
