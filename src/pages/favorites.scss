@@ -96,6 +96,12 @@
   }
 }
 
+@media (max-width: 1400px) {
+  .favorite-card {
+    width: 27%;
+  }
+}
+
 @media (max-width: 1200px) {
   .favorite-card {
     width: calc(28% - 16px);
