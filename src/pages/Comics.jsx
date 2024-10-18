@@ -21,9 +21,7 @@ const Comics = () => {
   // const [value] = useDebounce(search, 1500);
 
   useEffect(() => {
-    let url = `https://site--backend-marvel--rfd99txfpp4t.code.run/comics?apiKey=${
-      import.meta.env.VITE_API_KEY
-    }&page=${page}`;
+    let url = `https://site--backend-marvel--rfd99txfpp4t.code.run/comics?page=${page}`;
 
     // Le filtre search s'appliquera uniquement si sa valeur est différente d'une string vide (si l'utilisateur remplit la barre de recherche).
     // Cela évite que rien ne s'affiche quand l'utilisateur ne fait pas de recherche !

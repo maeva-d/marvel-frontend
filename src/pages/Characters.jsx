@@ -21,9 +21,7 @@ const Characters = () => {
   // const [added, setAdded] = useState([]);
 
   useEffect(() => {
-    let url = `https://site--backend-marvel--rfd99txfpp4t.code.run/characters?apiKey=${
-      import.meta.env.VITE_API_KEY
-    }&page=${page}`;
+    let url = `https://site--backend-marvel--rfd99txfpp4t.code.run/characters?page=${page}`;
 
     // Le filtre search s'appliquera uniquement si sa valeur est différente d'une string vide (si l'utilisateur rempli la barre de recherche).
     // Cela évite que rien ne s'affiche quand l'utilisateur ne fait pas de recherche !

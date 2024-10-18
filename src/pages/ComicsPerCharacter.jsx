@@ -18,9 +18,7 @@ const ComicsPerCharacter = () => {
   const { characterId } = useParams();
 
   useEffect(() => {
-    let url = `https://site--backend-marvel--rfd99txfpp4t.code.run/comics/${characterId}?apiKey=${
-      import.meta.env.VITE_API_KEY
-    }&page=${page}`;
+    let url = `https://site--backend-marvel--rfd99txfpp4t.code.run/comics/${characterId}?page=${page}`;
 
     const fetchData = async () => {
       try {
