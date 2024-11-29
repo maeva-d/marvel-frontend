@@ -37,7 +37,6 @@ const Favorites = () => {
 
         <menu>
           {arr.map((fav) => {
-            console.log("fav elem", fav);
             return (
               <Link
                 to={fav.name ? `/character/${fav._id}` : `/comic/${fav._id}`}

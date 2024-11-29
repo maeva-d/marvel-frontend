@@ -137,25 +137,11 @@
 @media (max-width: 576px) {
   .characters-and-comics {
     input {
-      width: 350px;
+      width: 100%;
     }
   }
   .cards {
-    width: 350px;
-    padding: 16px;
-  }
-}
-
-@media (max-width: 430px) {
-  .characters-and-comics {
-    input {
-      width: 265px;
-      height: 32px;
-    }
-  }
-
-  .cards {
-    width: 265px;
+    width: 100%;
 
     p {
       font-size: 16px;

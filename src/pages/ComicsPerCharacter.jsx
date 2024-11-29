@@ -25,7 +25,6 @@ const ComicsPerCharacter = () => {
         const response = await axios.get(url);
         setData(response.data);
         setIsLoading(false);
-        console.log(response.data);
       } catch (error) {
         console.log(error.response.data);
       }

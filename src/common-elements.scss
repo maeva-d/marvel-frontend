@@ -9,10 +9,6 @@
   min-height: calc(100vh - 62px); // La taille du header
 }
 
-.pointer {
-  cursor: pointer;
-}
-
 // -- MEDIA -- //
 
 @media (max-width: 1400px) {
@@ -24,7 +20,7 @@
 @media (max-width: 992px) {
   .container {
     width: 768px;
-    padding: 24px;
+    padding: 0 24px;
   }
 }
 

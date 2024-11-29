@@ -30,8 +30,6 @@ const CharacterOrComic = () => {
         );
         setData(response.data);
         setIsLoading(false);
-        console.log("char id =>", characterId, "comic id =>", comicId);
-        console.log("res data =>", response.data);
       } catch (error) {
         console.log(error);
       }
@@ -59,7 +57,7 @@ const CharacterOrComic = () => {
           <h2>{data.name ?? data.title}</h2>
         </div>
 
-        {data.description !== null && <p>{data.description}</p>}
+        {data.description && <p>{data.description}</p>}
       </article>
     </section>
   );

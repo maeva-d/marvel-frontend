@@ -85,9 +85,7 @@ const Characters = () => {
                       <h2>{character.name}</h2>
                     </div>
 
-                    {character.description !== null && (
-                      <p>{character.description}</p>
-                    )}
+                    {character.description && <p>{character.description}</p>}
                   </article>
                 </Link>
               );
