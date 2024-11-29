@@ -40,7 +40,7 @@ const ComicsPerCharacter = () => {
       <div className="container characters-and-comics">
         <h3>{`Results found : ${data.comics.length}`}</h3>
         <h1>{`All the comics ${data.name} is featured in :`}</h1>
-        {data.comics.length === -1 ? (
+        {data.comics.length !== 0 ? (
           <Pagination
             limit={data.comics.length}
             pageNumber={page}
