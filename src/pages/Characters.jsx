@@ -77,7 +77,7 @@ const Characters = () => {
                           event.preventDefault();
                           handleFavorites(character);
                         }}
-                      ></HeartIcon>
+                      />
                       <img
                         src={`${character.thumbnail.path}.${character.thumbnail.extension}`}
                         alt={character.name}
@@ -85,7 +85,7 @@ const Characters = () => {
                       <h2>{character.name}</h2>
                     </div>
 
-                    {character.description !== "" && (
+                    {character.description !== null && (
                       <p>{character.description}</p>
                     )}
                   </article>

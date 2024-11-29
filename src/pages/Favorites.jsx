@@ -54,7 +54,7 @@ const Favorites = () => {
                       }}
                     ></HeartIcon>
                   </div>
-                  <h2>{fav.name || fav.title}</h2>
+                  <h2>{fav.name ?? fav.title}</h2>
                   <img
                     src={`${fav.thumbnail.path}.${fav.thumbnail.extension}`}
                     alt={fav.name}

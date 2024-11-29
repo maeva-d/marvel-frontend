@@ -42,11 +42,9 @@ const CharacterOrComic = () => {
   return isLoading ? (
     <Loading />
   ) : (
-    <section className="characters-and-comics layout">
-      <h1>
-        <span>Everything about :</span> {data.title ?? data.name}
-      </h1>
-      <article className="cards pointer">
+    <section className="characters-and-comics container">
+      <h1>Everything about :</h1>
+      <article className="cards">
         <div>
           <HeartIcon
             onClick={(event) => {
