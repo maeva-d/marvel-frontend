@@ -25,18 +25,16 @@
 
   // La pagination, qui aura des propriétés légèrements différentes
   nav {
-    > div {
-      justify-content: center;
-      height: unset;
-      margin: 0 0 32px 0;
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   menu {
     display: flex;
     flex-wrap: wrap;
     gap: 32px;
-    margin-bottom: 32px;
+    margin: 40px 0;
   }
 }
 
