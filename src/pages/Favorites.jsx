@@ -40,7 +40,7 @@ const Favorites = () => {
             console.log("fav elem", fav);
             return (
               <Link
-                to={fav.name ? `/characters/${fav._id}` : `/comics/${fav._id}`}
+                to={fav.name ? `/character/${fav._id}` : `/comic/${fav._id}`}
                 key={fav._id}
                 className={`${display} favorite-card`}
               >

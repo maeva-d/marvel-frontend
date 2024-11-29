@@ -7,6 +7,7 @@ import Characters from "./pages/Characters";
 import ComicsPerCharacter from "./pages/ComicsPerCharacter";
 import Comics from "./pages/Comics";
 import Favorites from "./pages/Favorites";
+import CharacterOrComic from "./pages/CharacterOrComic";
 
 const App = () => {
   return (
@@ -17,6 +18,8 @@ const App = () => {
         <Route path="/comics/:characterId" element={<ComicsPerCharacter />} />
         <Route path="/comics" element={<Comics />} />
         <Route path="/favorites" element={<Favorites />} />
+        <Route path="/character/:characterId" element={<CharacterOrComic />} />
+        <Route path="/comic/:comicId" element={<CharacterOrComic />} />
       </Routes>
     </Router>
   );

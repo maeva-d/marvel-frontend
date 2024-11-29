@@ -11,8 +11,6 @@ import NoResults from "../Components/no-results/NoResults";
 import Pagination from "../Components/pagination/Pagination";
 import HeartIcon from "../Components/heart-icon/heartIcons";
 
-// require("dotenv").config();
-
 const Characters = () => {
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
@@ -34,6 +32,7 @@ const Characters = () => {
         const response = await axios.get(url);
         setData(response.data);
         setIsLoading(false);
+        console.log(response.data);
       } catch (error) {
         console.log(error.response.data);
       }
@@ -70,13 +69,8 @@ const Characters = () => {
           <section>
             {data.results.map((character) => {
               return (
-                <Link
-                  to={`comics/${character._id}?apiKey=${
-                    import.meta.env.VITE_API_KEY
-                  }`}
-                  key={character._id}
-                >
-                  <article key={character._id} className="cards pointer">
+                <Link to={`comics/${character._id}`} key={character._id}>
+                  <article key={character._id} className="cards">
                     <div>
                       <HeartIcon
                         onClick={(event) => {

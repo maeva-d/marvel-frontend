@@ -25,6 +25,7 @@ const ComicsPerCharacter = () => {
         const response = await axios.get(url);
         setData(response.data);
         setIsLoading(false);
+        console.log(response.data);
       } catch (error) {
         console.log(error.response.data);
       }
@@ -39,11 +40,15 @@ const ComicsPerCharacter = () => {
       <div className="container characters-and-comics">
         <h3>{`Results found : ${data.comics.length}`}</h3>
         <h1>{`All the comics ${data.name} is featured in :`}</h1>
-        <Pagination
-          limit={data.comics.length}
-          pageNumber={page}
-          setPageNumber={setPage}
-        ></Pagination>
+        {data.comics.length === -1 ? (
+          <Pagination
+            limit={data.comics.length}
+            pageNumber={page}
+            setPageNumber={setPage}
+          ></Pagination>
+        ) : (
+          <h3>... Seems like there is none (yet)!</h3>
+        )}
 
         <section>
           {data.comics.map((comic) => {
@@ -67,12 +72,14 @@ const ComicsPerCharacter = () => {
             );
           })}
         </section>
+        {data.comics.length === -1 && (
+          <Pagination
+            limit={data.comics.length}
+            pageNumber={page}
+            setPageNumber={setPage}
+          ></Pagination>
+        )}
       </div>
-      <Pagination
-        limit={data.comics.length}
-        pageNumber={page}
-        setPageNumber={setPage}
-      ></Pagination>
     </main>
   );
 };
