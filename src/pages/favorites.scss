@@ -1,9 +1,9 @@
 .favorites {
-  div {
+  > div {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 80px;
+    height: 150px;
 
     h1 {
       font-family: "Bangers", system-ui;
@@ -24,7 +24,7 @@
 
   // La pagination, qui aura des propriétés légèrements différentes
   nav {
-    div {
+    > div {
       justify-content: center;
       height: unset;
       margin: 0 0 32px 0;
@@ -49,50 +49,57 @@
   padding: 24px;
   background-color: white;
   transition: transform 400ms;
+  text-decoration: none;
   &:hover {
     transform: translateY(-16px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   }
-  > img {
-    height: 300px;
-    width: 100%;
-    border-radius: 8px;
-    object-fit: cover;
-  }
 
-  > div {
+  article {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: space-between;
-    height: 40px;
-
-    > span {
-      display: block;
-      font-family: "Roboto", sans-serif;
-      font-weight: 100;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      word-spacing: 4px;
-      font-size: 18px;
-    }
-
-    // l'icone coeur, qui aura des propriétés légèrements différentes
     > img {
-      position: unset;
-      top: unset;
-      right: unset;
+      height: 300px;
+      width: 100%;
+      border-radius: 8px;
+      object-fit: cover;
     }
-  }
 
-  h2 {
-    font-size: 30px;
-    font-family: "Bangers", system-ui;
-    color: rgb(253, 241, 242);
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: rgb(68, 68, 68);
-    margin: 16px 0;
-    line-height: 40px;
-    text-align: center;
+    > div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 40px;
+
+      > span {
+        display: block;
+        font-family: "Roboto", sans-serif;
+        font-weight: 100;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        word-spacing: 4px;
+        font-size: 18px;
+      }
+
+      // l'icone coeur, qui aura des propriétés légèrements différentes
+      > img {
+        position: unset;
+        top: unset;
+        right: unset;
+      }
+    }
+
+    h2 {
+      font-size: 30px;
+      font-family: "Bangers", system-ui;
+      color: rgb(253, 241, 242);
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: rgb(68, 68, 68);
+      margin: 16px 0;
+      line-height: 40px;
+      text-align: center;
+    }
   }
 }
 
@@ -178,7 +185,6 @@
   .favorites {
     > div {
       flex-direction: column;
-      height: 150px;
       justify-content: center;
 
       > h1 {

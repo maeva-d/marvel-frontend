@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import handleFavorites from "../handleFavorites";
 // styles
 import "../common-elements.scss";
@@ -36,24 +37,30 @@ const Favorites = () => {
 
         <menu>
           {arr.map((fav) => {
-            // console.log("fav elem", fav);
+            console.log("fav elem", fav);
             return (
-              <article className={`${display} favorite-card`} key={fav._id}>
-                <div>
-                  <span>{fav.name ? "(characters)" : "(comics)"}</span>
-                  <HeartIcon
-                    onClick={(event) => {
-                      event.preventDefault();
-                      handleFavorites(fav, display, setDisplay);
-                    }}
-                  ></HeartIcon>
-                </div>
-                <h2>{fav.name || fav.title}</h2>
-                <img
-                  src={`${fav.thumbnail.path}.${fav.thumbnail.extension}`}
-                  alt={fav.name}
-                />
-              </article>
+              <Link
+                to={fav.name ? `/characters/${fav._id}` : `/comics/${fav._id}`}
+                key={fav._id}
+                className={`${display} favorite-card`}
+              >
+                <article>
+                  <div>
+                    <span>{fav.name ? "(characters)" : "(comics)"}</span>
+                    <HeartIcon
+                      onClick={(event) => {
+                        event.preventDefault();
+                        handleFavorites(fav, display, setDisplay);
+                      }}
+                    ></HeartIcon>
+                  </div>
+                  <h2>{fav.name || fav.title}</h2>
+                  <img
+                    src={`${fav.thumbnail.path}.${fav.thumbnail.extension}`}
+                    alt={fav.name}
+                  />
+                </article>
+              </Link>
             );
           })}
         </menu>

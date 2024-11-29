@@ -101,14 +101,14 @@ const Comics = () => {
             })}
           </section>
         )}
+        {data.count > 0 && (
+          <Pagination
+            limit={data.limit}
+            pageNumber={page}
+            setPageNumber={setPage}
+          ></Pagination>
+        )}
       </div>
-      {data.count > 0 && (
-        <Pagination
-          limit={data.limit}
-          pageNumber={page}
-          setPageNumber={setPage}
-        ></Pagination>
-      )}
     </main>
   );
 };
